@@ -1,0 +1,5 @@
+# transpose a single spreadsheet and write to output file name specified
+method:                    spreadsheet_transpose
+
+spreadsheet_file_name:     ../data/spreadsheets/spreadsheet_One.txt
+results_directory:         ./run_dir/results
