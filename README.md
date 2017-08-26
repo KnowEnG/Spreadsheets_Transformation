@@ -46,5 +46,5 @@ Subset the initial spreadsheet's rows based on a given row index names set.
 ## 5. Group Then Apply a Function
 
 <p align="center">
-  <img  width="200" height="200" src="images/GroupThenApplyaFunction.png/200/200">
+  <img  width="200" height="200" src="images/GroupThenApplyaFunction.png">
 </p>
