@@ -22,11 +22,16 @@ be a smaller spreadsheet and possibly with fewer columns.
 
 ## 2. Intersection
 
+Finds the intersection between two spreadsheets row names and keep the column names of the two spreadsheets as is.
+Output is a  spreadsheet more columns with potentially fewer rows.
+
 <p align="center">
   <img  src="images/Intersection.png">
 </p>
 
 ## 3. Subset Genes
+
+Subset the initial spreadsheet's rows based on a given row index names set.
 
 <p align="center">
   <img  src="images/SubsetGenes.png">
