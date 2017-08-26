@@ -50,5 +50,5 @@ Merge two phenotype spreadsheets such that the final spreadsheet contains all co
 Given expression spreadsheet and a group-samples-by criterion, create for example the centroid of each group as a signature. 
 
 <p align="center">
-  <img  src="images/GroupThenApplyFunction.png">
+  <img  src="images/GroupThenApplyaFunction.png">
 </p>
