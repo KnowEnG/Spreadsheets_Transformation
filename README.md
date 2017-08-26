@@ -42,9 +42,9 @@ Subset the initial spreadsheet's rows based on a given row index names set.
 <p align="center">
   <img  src="images/Union.png">
 </p>
-
-## 5. Group Then Apply a Function
+Group
+## 5.  Group Then Apply a Function
 
 <p align="center">
-  <img  width="200" height="200" src="images/Union.png">
+  <img  width="200" height="200" src="images/GroupThenApplyaFunction.png">
 </p>
