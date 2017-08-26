@@ -1,8 +1,6 @@
 # Spreadsheets Transformation
 Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, ...)
 
---------------------=============
---------------------=============
 
 ## Table of Transformtions
 
@@ -16,13 +14,13 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
 
 ## 1. Subset Expression Based on Phenotype
 
-<img align="left" width="100" height="100" src="images/SubsetExpressionBasedonPhenotype.png">
+<img align="left" src="images/SubsetExpressionBasedonPhenotype.png">
 
 ---
 
 ## 2. Intersection
 
-<img align="left" width="100" height="100" src="images/Intersection.png">
+<img align="left"  src="images/Intersection.png">
 
 ---
 
