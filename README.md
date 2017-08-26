@@ -1,5 +1,5 @@
 # Spreadsheets Transformation
-Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, ...)
+Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, ...)
 
 
 ## Table of Transformtions
@@ -34,4 +34,10 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
 
 <p align="center">
   <img  src="images/Union.png">
+</p>
+
+## 5. Group Then Apply a Function
+
+<p align="center">
+  <img  src="images/GroupThenApplyaFunction.png">
 </p>
