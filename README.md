@@ -1,11 +1,9 @@
 # Spreadsheets Transformation
-Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, ...)
+Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, ...)
 
---------------------=============
---------------------=============
 
 ## Table of Transformtions
-
+---
 1. Subset Expression Based on Phenotype
 2. Intersection
 3. Subset Genes
@@ -14,26 +12,43 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
 
 ## 1. Subset Expression Based on Phenotype
 
-<img align="left" width="100" height="100" src="images/SubsetExpressionBasedonPhenotype.png">
-
-## 2. Intersection
-
-<img align="left" width="100" height="100" src="images/Intersection.png">
-
-## 3. Subset Genes
-
-<img align="left" width="100" height="100" src="images/SubsetGenes.png">
-
-
-## 4. Union
+Subset samples based on some row value, e.g., patients with longer survival. Output can 
+be a smaller spreadsheet and possibly with fewer columns.
 
 <p align="center">
-  <img width="460" height="300" src="images/Union.png">
+  <img  src="images/SubsetExpressionBasedonPhenotype.png">
 </p>
 
 
-## 5. Group Then Apply a Function
+## 2. Intersection
 
-<img align="right" width="100" height="100" src="images/GroupThenApplyaFunction.png">
+Finds the intersection between two spreadsheets row names and keep the column names of the two spreadsheets as is.
+Output is a  spreadsheet more columns with potentially fewer rows.
 
+<p align="center">
+  <img  src="images/Intersection.png">
+</p>
 
+## 3. Subset Genes
+
+Subset the initial spreadsheet's rows based on a given row index names set.
+
+<p align="center">
+  <img  src="images/SubsetGenes.png">
+</p>
+
+## 4. Union
+
+Merge two phenotype spreadsheets such that the final spreadsheet contains all columns names and row names.
+
+<p align="center">
+  <img  src="images/Union.png">
+</p>
+
+## 5.  Group Then Apply a Function
+
+Given expression spreadsheet and a group-samples-by criterion, create for example the centroid of each group as a signature. 
+
+<p align="center">
+  <img  src="images/GroupThenApplyaFunction.png">
+</p>
