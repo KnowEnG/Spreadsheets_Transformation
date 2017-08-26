@@ -46,5 +46,5 @@ Group
 ## 5.  Group Then Apply a Function
 
 <p align="center">
-  <img  width="200" height="200" src="images/GroupThenApplyaFunction.png">
+  <img  src="images/GroupThenApplyaFunction.png">
 </p>
