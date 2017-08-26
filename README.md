@@ -46,9 +46,10 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
 
 ## 5. Group Then Apply a Function
 
-
 <p align="center">
   <img  src="images/GroupThenApplyaFunction.png">
 </p>
 
 ---
+
+
