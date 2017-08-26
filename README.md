@@ -15,6 +15,8 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, 
 <p align="center">
   <img  src="images/SubsetExpressionBasedonPhenotype.png">
 </p>
+Subset samples based on some row value, e.g., patients with longer survival. Output can 
+be a smaller spreadsheet and possibly with fewer columns
 
 ## 2. Intersection
 
