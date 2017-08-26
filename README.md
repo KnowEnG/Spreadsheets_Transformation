@@ -37,5 +37,5 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, 
 ## 5. Group Then Apply a Function
 
 <p align="center">
-  <img  width="200" height="200" src="images/GroupThenApplyaFunction.png">
+  <img  width="200" height="200" src="images/GroupThenApplyaFunction.png/200/200">
 </p>
