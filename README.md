@@ -10,7 +10,6 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
 4. Union
 5. Group Then Apply a Function
 
----
 
 ## 1. Subset Expression Based on Phenotype
 
@@ -18,7 +17,6 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
   <img  src="images/SubsetExpressionBasedonPhenotype.png">
 </p>
 
----
 
 ## 2. Intersection
 
@@ -26,7 +24,6 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
   <img  src="images/Intersection.png">
 </p>
 
----
 
 ## 3. Subset Genes
 
@@ -34,7 +31,6 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
   <img  src="images/SubsetGenes.png">
 </p>
 
----
 
 ## 4. Union
 
@@ -42,9 +38,6 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
   <img  src="images/Union.png">
 </p>
 
----
-
----
 
 ## 5. Group Then Apply a Function
 
@@ -52,13 +45,11 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotype, .
   <img  src="images/GroupThenApplyaFunction.png">
 </p>
 
----
+
 ## 5. Group Then Apply a Function
 
 <p align="center">
   <img  src="images/GroupThenApplyaFunction.png">
 </p>
-
----
 
 
