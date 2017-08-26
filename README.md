@@ -39,11 +39,15 @@ Subset the initial spreadsheet's rows based on a given row index names set.
 
 ## 4. Union
 
+Merge two phenotype spreadsheets such that the final spreadsheet contains all columns names and row names.
+
 <p align="center">
   <img  src="images/Union.png">
 </p>
 
 ## 5.  Group Then Apply a Function
+
+Given expression spreadsheet and a group-samples-by criterion, create for example the centroid of each group as a signature. 
 
 <p align="center">
   <img  src="images/GroupThenApplyFunction.png">
