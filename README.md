@@ -3,9 +3,7 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, 
 
 
 ## Table of Transformtions
-
 ---
-
 1. Subset Expression Based on Phenotype
 2. Intersection
 3. Subset Genes
@@ -39,5 +37,5 @@ Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, 
 ## 5. Group Then Apply a Function
 
 <p align="center">
-  <img  width="100" height="100" src="images/GroupThenApplyaFunction.png">
+  <img  width="200" height="200" src="images/GroupThenApplyaFunction.png">
 </p>
