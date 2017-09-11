@@ -1,0 +1,16 @@
+method:                      numeric_transform
+
+spreadsheet_name_full_path:  ../data/spreadsheets/spreadsheet_A_.G.tsv
+results_directory:           ./run_dir/results
+
+numeric_function:            abs # [abs, z_transform, log_transform, threshold]
+
+z_transform_axis:             1
+z_transform_ddof:             0
+
+log_transform_log_base:       e   # e for natural log or a positive number
+log_transform_log_offset:     0
+
+threshold_cut_off:            0.5
+threshold_substitution_value: 0
+threshold_scope:              SUB_BELOW # [SUB_BELOW, SUB_ABOVE]
