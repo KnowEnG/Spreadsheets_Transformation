@@ -1,0 +1,10 @@
+# From a genes x samples spreadsheet and a samples x phenotypes spreadsheet, return both spreadsheets with
+# only the samples corresponding to a category in a phenotype and write to output files names specified
+method:                                   select_subtype_df
+
+spreadsheet_file_name:                    ../data/spreadsheets/transform_5_spreadsheet.tsv
+phenotype_file_name:                      ../data/spreadsheets/spreadsheet_Two.txt
+phenotype_id:                             "grade"
+select_category:                          "grade 3"
+
+results_directory:                        ./run_dir/results
