@@ -492,7 +492,7 @@ def write_transform_df(spreadsheet_df, spreadsheet_file_name, transform_name, re
         results_directory:      an existing directory to write to
     """
     result_name = get_outfile_name(results_directory, spreadsheet_file_name, transform_name)
-    spreadsheet_df.to_csv(result_name, sep='\t')
+    spreadsheet_df.to_csv(result_name, sep='\t',float_format='%g')
 
 
 def get_outfile_name(destination_dir, spreadsheet_file_name, transform_name, file_ext='tsv'):

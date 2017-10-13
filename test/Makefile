@@ -26,6 +26,8 @@ clean_dir_recursively:
 # ----------------------------------------------------------------
 # Benchmarks RUN Section                                   -
 # ----------------------------------------------------------------
+run_all: run_spreadsheet_transpose  run_spreadsheets_common_samples  run_spreadsheets_merge  run_select_spreadsheet_genes  run_spreadsheet_clustering_averages run_spreadsheet_select_pheno_categorical run_numerical_tranform run_stat_values
+	 
 run_spreadsheet_transpose:
 	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_1_transpose.yml
 
