@@ -9,9 +9,7 @@ import numpy as np
 from scipy import stats
 import knpackage.toolbox as kn
 
-"""                                                                                    Spreadsheet transformations   """
 
-# Subset samples based on some row value, e.g., patients with longer survival.
 def run_select_subtype_df(run_parameters):
     """ Subset samples based on some row value, e.g., patients with longer survival.
         Output can be a smaller spreadsheet with fewer columns.
@@ -52,15 +50,14 @@ def select_subtype_df(spreadsheet_df, phenotype_df, phenotype_id, select_categor
         spreadsheet_category_df: genes x samples dataframe with only the samples corresponding to a category in pheno
         phenotype_category_df:   samples x phenotypes dataframe with only the samples corresponding to a category
     """
-    samples_list = phenotype_df.index[phenotype_df[phenotype_id] == select_category]
+    samples_list = sorted(phenotype_df.index[phenotype_df[phenotype_id] == select_category])
     phenotype_category_df = phenotype_df.loc[samples_list]
-    samples_list = list(set(samples_list) & set(spreadsheet_df.columns))
+    samples_list = sorted(list(set(samples_list) & set(spreadsheet_df.columns)))
     spreadsheet_category_df = spreadsheet_df[samples_list]
 
     return spreadsheet_category_df, phenotype_category_df
 
 
-# Make two spreadsheets consistent by samples.
 def run_common_samples_df(run_parameters):
     """ Make two spreadsheets consistent by samples: two new spreadsheets created
         with samples being the intersection of sample sets of given spreadsheets.
@@ -99,7 +96,6 @@ def common_samples_df(sxp_1_df, sxp_2_df):
     return sxp_1_df.loc[common_samples_list], sxp_2_df.loc[common_samples_list]
 
 
-# Subset genes based on given gene set.
 def run_select_genes(run_parameters):
     """ Subset genes based on given gene set. Output is a spreadsheet with fewer rows
     Args:           run_parameters with keys:
@@ -197,19 +193,20 @@ def cluster_statistics_df(spreadsheet_df, labels_df, centroid_statistic='mean', 
         cluster_ave_df:   a dataframe of averages for each category
     """
     labels_dict = labels_df.to_dict()['cluster_number']
+    clusters_dict = {c: [] for c in list(np.unique(list(labels_dict.values())))}
+    for k, v in labels_dict.items():
+        clusters_dict[v].append(k)
     cluster_numbers = list(np.unique(list(labels_dict.values())))
-    labels = list(labels_dict.values())
+    # labels = list(labels_dict.values())
     if centroid_statistic == 'std':
-        cluster_ave_df = pd.DataFrame({i: spreadsheet_df.iloc[:, labels == i].std(axis=axis) for i in cluster_numbers})
+        cluster_ave_df = pd.DataFrame({i: spreadsheet_df.loc[:, clusters_dict[i]].std(axis=axis) for i in cluster_numbers})
     elif centroid_statistic == 'median':
-        cluster_ave_df = pd.DataFrame({i: spreadsheet_df.iloc[:, labels == i].median(axis=axis) for i in cluster_numbers})
+        cluster_ave_df = pd.DataFrame({i: spreadsheet_df.loc[:, clusters_dict[i]].median(axis=axis) for i in cluster_numbers})
     else:
-        cluster_ave_df = pd.DataFrame({i: spreadsheet_df.iloc[:, labels == i].mean(axis=axis) for i in cluster_numbers})
+        cluster_ave_df = pd.DataFrame({i: spreadsheet_df.loc[:, clusters_dict[i]].mean(axis=axis) for i in cluster_numbers})
 
     return cluster_ave_df
 
-
-"""                                                                                          Basic Transformations   """
 
 def run_transpose(run_parameters):
     """ transpose a spreadsheet.

@@ -56,6 +56,8 @@ run_stat_values:
 # ----------------------------------------------------------------
 # - VERIFICATION TESTS RUN SECTION                               -
 # ----------------------------------------------------------------
+verification_tests:
+	python3 integration/verify_benchmarks.py
 
 # ----------------------------------------------------------------
 # - UNIT TESTS RUN SECTION                                       -
