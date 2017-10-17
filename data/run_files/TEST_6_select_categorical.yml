@@ -2,9 +2,9 @@
 # only the samples corresponding to a category in a phenotype and write to output files names specified
 method:                                   select_subtype_df
 
-spreadsheet_file_name:                    ../data/spreadsheets/transform_5_spreadsheet.tsv
-phenotype_file_name:                      ../data/spreadsheets/spreadsheet_Two.txt
-phenotype_id:                             "grade"
-select_category:                          "grade 3"
+spreadsheet_file_name:                    ../data/spreadsheets/tcga_ucec_somatic_mutation_data.df
+phenotype_file_name:                      ../data/spreadsheets/UCEC_phenotype.txt
+phenotype_id:                             "hist_simple"
+select_category:                          "serous adenocarcinoma"
 
 results_directory:                        ./run_dir/results
