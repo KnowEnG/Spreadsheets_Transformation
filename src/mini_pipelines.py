@@ -3,7 +3,6 @@ Created on Thursday September 7 12:54:00 2017
 @author: The KnowEnG dev team
 lanier4@illinois.edu
 """
-"""                                                                                    Spreadsheet transformations   """
 def select_subtype_df(run_parameters):
     """ get sub_spreadsheet_df and sub_phenotype_df of a phenotype category """
     from mini_pipelines_toolbox import run_select_subtype_df
@@ -29,7 +28,6 @@ def cluster_statistics_df(run_parameters):
     from mini_pipelines_toolbox import run_cluster_statistics_df
     run_cluster_statistics_df(run_parameters)
 
-"""                                                                                          Basic Transformations   """
 def transpose_df(run_parameters):
     ''' transpose and write a spreadsheet'''
     from mini_pipelines_toolbox import run_transpose

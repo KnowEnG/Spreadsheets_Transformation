@@ -1,0 +1,92 @@
+	days_to_death	days_to_last	days_survival	diag_age	race	ethnicity	gender	living	histICDO3	hist_simple	ICDO3site	ICD10	ICD10_simple	stage	stage_simple	stage_ismeta	grade	grade_simple	residual
+TCGA-A5-A0G1	3251		3251	67	white	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-A5-A0G2		4053	4053	57	asian	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiib	iii	0	grade 3	High Grade	r0
+TCGA-A5-A0G3		1079	1079	61	black or african american		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r0
+TCGA-A5-A0R6		369	369	64			female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic1	iii	0	grade 3	High Grade	r0
+TCGA-A5-A1OF		241	241	47		hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	high grade	High Grade	r0
+TCGA-A5-A1OG		348	348	65	asian	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r0
+TCGA-A5-A2K2		2768	2768	77	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-A5-A2K3		1409	1409	68	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-A5-A2K4	871		871	69	white		female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiia	iii	0	grade 3	High Grade	r1
+TCGA-A5-A3LP		230	230	74	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-AJ-A23M		31	31	61	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ii	ii	0	grade 3	High Grade	
+TCGA-AJ-A2QM		31	31	67	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ii	ii	0	grade 3	High Grade	
+TCGA-AJ-A3EJ	50		50	74	white		female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r0
+TCGA-AJ-A3EK		64	64	53	white	hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	
+TCGA-AJ-A3NF		41	41	60	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	r0
+TCGA-AJ-A3NG		52	52	83	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ii	ii	0	grade 3	High Grade	r0
+TCGA-AJ-A3NH		0	0	90	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-AJ-A3OK		142	142	73	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-AP-A052	669		669	59	black or african american		female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ivb	iv	1	grade 3	High Grade	r2
+TCGA-AP-A05A		1198	1198	81	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ii	ii	0	grade 3	High Grade	r0
+TCGA-AP-A05D		1364	1364	67	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r0
+TCGA-AP-A05H		831	831	75	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-AP-A05J		639	639	66	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ii	ii	0	grade 3	High Grade	r0
+TCGA-AP-A0L8	1484		1484	70	black or african american		female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r0
+TCGA-AP-A0L9		3443	3443	71	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-AP-A0LH	1106		1106	60	white	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-AP-A0LI		2602	2602	67	black or african american		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r2
+TCGA-AP-A1DP	1081		1081	70	white		female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 2	Low grade (1,2)	r0
+TCGA-AX-A0IU		868	868	79	black or african american	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	r0
+TCGA-AX-A0IW		1148	1148	67	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiia	iii	0	grade 3	High Grade	r0
+TCGA-AX-A1C7		515	515	77	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-AX-A1C8		412	412	77	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	r1
+TCGA-AX-A1CA		617	617	70	black or african american	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r1
+TCGA-AX-A1CC		378	378	65	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ic	i	0	grade 3	High Grade	r0
+TCGA-AX-A1CP		1107	1107	84	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r1
+TCGA-AX-A1CR		337	337	70	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iib	ii	0	grade 3	High Grade	r1
+TCGA-AX-A2H2	145		145	86	black or african american	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iia	ii	0	grade 3	High Grade	r0
+TCGA-AX-A2H4	915		915	66	white	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiia	iii	0	grade 3	High Grade	r2
+TCGA-AX-A2H5		2167	2167	67	black or african american	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	r1
+TCGA-AX-A2HF		489	489	67	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-AX-A2IO		1176	1176	83	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iia	ii	0	grade 3	High Grade	r1
+TCGA-AX-A3G3		1	1	58	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiia	iii	0	grade 3	High Grade	
+TCGA-AX-A3G4		4	4	60	native hawaiian or other pacific islander	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	
+TCGA-AX-A3G6		0	0	67	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 2	Low grade (1,2)	
+TCGA-AX-A3G7		7	7	71	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ivb	iv	1	grade 3	High Grade	
+TCGA-AX-A3GI		4	4	66	black or african american	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	
+TCGA-B5-A0JN		2068	2068	84	black or african american		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ivb	iv	1	grade 3	High Grade	
+TCGA-B5-A0K8		542	542	71	white		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	
+TCGA-B5-A1MU	1547		1547	79	white		female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ivb	iv	1	grade 3	High Grade	
+TCGA-B5-A1MY	361		361	62	black or african american		female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	
+TCGA-B5-A1N2		389	389	70	black or african american		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic1	iii	0	grade 3	High Grade	
+TCGA-BG-A0M6		241	241	73	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r0
+TCGA-BG-A0YV		186	186	67	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiia	iii	0	grade 3	High Grade	r0
+TCGA-BG-A2AE		16	16	57	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	
+TCGA-BK-A0CA		371	371	61	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	rx
+TCGA-BK-A26L		233	233	71	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic1	iii	0	grade 3	High Grade	rx
+TCGA-D1-A0ZP		690	690	59	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iva	iv	1	grade 3	High Grade	rx
+TCGA-D1-A15V		1012	1012	68	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-D1-A15X		909	909	45	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	high grade	High Grade	r0
+TCGA-D1-A16G	834		834	74	white	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iv	iv	1	high grade	High Grade	rx
+TCGA-D1-A16I	349		349	62	white	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ic	i	0	high grade	High Grade	r0
+TCGA-D1-A16S		238	238	70	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	high grade	High Grade	r0
+TCGA-D1-A179		206	206	76	white	hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	high grade	High Grade	r0
+TCGA-D1-A1NU		311	311	74	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-D1-A1NW		22	22	72	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ivb	iv	1	grade 3	High Grade	r0
+TCGA-D1-A1NX		399	399	66	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	r0
+TCGA-D1-A2G0		107	107	70	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-D1-A2G7		1365	1365	65	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-DI-A1NN		943	943	63	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	r0
+TCGA-DI-A2QT	377		377	51	american indian or alaska native	hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic	iii	0	grade 3	High Grade	r2
+TCGA-DI-A2QU	946		946	67	white	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ivb	iv	1	grade 3	High Grade	rx
+TCGA-DI-A2QY		2797	2797	64	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iib	ii	0	grade 3	High Grade	rx
+TCGA-E6-A1LZ		1289	1289	76	black or african american	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-E6-A2P8	72		72	53	black or african american	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iv	iv	1	grade 3	High Grade	
+TCGA-EO-A1Y5		332	332	63			female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r0
+TCGA-EO-A1Y8		328	328	87			female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-EO-A2CG		672	672	69	asian	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-EO-A2CH	532		532	73			female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiib	iii	0	grade 3	High Grade	r2
+TCGA-EY-A1GM		209	209	60	black or african american		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiia	iii	0	grade 3	High Grade	r0
+TCGA-EY-A1GS		284	284	71	black or african american	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ivb	iv	1	grade 3	High Grade	r2
+TCGA-EY-A1GV		257	257	75	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic1	iii	0	grade 3	High Grade	r0
+TCGA-EY-A210		165	165	82	black or african american	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r0
+TCGA-EY-A2ON		171	171	61	black or african american	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ivb	iv	1	grade 3	High Grade	r2
+TCGA-EY-A2OO		774	774	56	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-FI-A2CY		1064	1064	60	black or african american	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-FI-A2D2		1095	1095	66	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ib	i	0	grade 3	High Grade	r0
+TCGA-FI-A2EU		2557	2557	68		not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
+TCGA-FI-A2EW		1795	1795	71	black or african american		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iib	ii	0	grade 3	High Grade	r0
+TCGA-FI-A2EX		276	276	58	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiia	iii	0	grade 3	High Grade	r0
+TCGA-FI-A2EY	883		883	63	white	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiia	iii	0	grade 3	High Grade	r0
+TCGA-FI-A2F8		761	761	64	white	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ii	ii	0	grade 3	High Grade	r0
