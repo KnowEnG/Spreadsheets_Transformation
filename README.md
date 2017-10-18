@@ -8,10 +8,10 @@ There are eight data wrangling methods that one can choose from:
 | Subset Expression Based on Phenotype             | select subtype                 | spreadsheet, phenotype, id, category|
 | Intersection                                     | common samples                       | two spreadsheets     |
 | Subset Genes                                     | select genes                         | spreadsheet, list     |
-| Union                                            | combine rows and columns             | two spreadsheets     |
-| Group Then Apply a Function                      | select columns compute               | spreadsheet-labels   |
-| Subset Expression Based on Phenotype             | phenotypic subset                    | phenotype_id-category|
-| Subset Expression Based on Phenotype             | phenotypic subset                    | phenotype_id-category|
+| Union                                            | merge                                | two spreadsheets     |
+| Group Then Apply a Function                      | cluster statistics                   | spreadsheet, labels   |
+| Spreadsheet numerical transform                  | numerical transform            | spreadsheet, transformation name|
+| Spreadsheet statistics                           | stats                          | spreadsheet, statistic name|
 | Transpose a spreadsheet                          | run_transpose                        | one spreadsheet |
 
 ## Table of Transformtions
