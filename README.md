@@ -5,7 +5,7 @@ There are eight data wrangling methods that one can choose from:
 
 | **Options**                                      | **Method**                           | **Parameters**       |
 | ------------------------------------------------ | -------------------------------------| -------------------- |
-| Subset Expression Based on Phenotype             | select subtype                 | spreadsheet, phenotype, id, category|
+| Subset Based on Phenotype category & id          | select subtype                 | spreadsheet, phenotype, id, category|
 | Intersection                                     | common samples                       | two spreadsheets     |
 | Subset Genes                                     | select genes                         | spreadsheet, list     |
 | Union                                            | merge                                | two spreadsheets     |
