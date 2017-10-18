@@ -138,3 +138,4 @@ make env_setup
 | make run_numerical_tranform | TEST_7_numerical_transform.yml|
 | make run_stat_values | TEST_8_stat_value.yml |
 
+### 7. TSV (tab separated value) ouput files will be written the results directory named in the Options file with the name (s) of the input files appended with the transformation name and a timestamp.
