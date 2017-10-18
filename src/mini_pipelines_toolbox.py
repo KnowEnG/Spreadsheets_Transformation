@@ -1,7 +1,8 @@
 """
 lanier4@illinois.edu
-prototype for KnowEnG group mini pipelines
+for KnowEnG pipelines
 """
+
 import os
 import pandas as pd
 import numpy as np
@@ -79,25 +80,28 @@ def run_common_samples_df(run_parameters):
     write_transform_df(spreadsheet_2_df, spreadsheet_2_file_name, transform_name, results_directory)
 
 
-def common_samples_df(sxp_1_df, sxp_2_df):
+def common_samples_df(spreadsheet_1_df, spreadsheet_2_df):
     """ Make two spreadsheets consistent by samples: two new spreadsheets created
         with samples being the intersection of sample sets of given spreadsheets.
-    Args:
-        sxp_1_df:      samples x phenotypes dataframe (sxp_1_df = kn.get_spreadsheet_df(sxp_filename_1))
-        sxp_2_df:      samples x phenotypes dataframe
-    Returns:
-        sxp_1_trim_df: samples x phenotypes with only sample names in both input dataframes
-        sxp_2_trim_df: samples x phenotypes with only sample names in both input dataframes
-    """
-    sxp_1_gene_names = kn.extract_spreadsheet_gene_names(sxp_1_df)
-    sxp_2_gene_names = kn.extract_spreadsheet_gene_names(sxp_2_df)
-    common_samples_list = kn.find_common_node_names(sxp_1_gene_names, sxp_2_gene_names)
 
-    return sxp_1_df.loc[common_samples_list], sxp_2_df.loc[common_samples_list]
+    Args:
+        spreadsheet_1_df:      samples x phenotypes dataframe (spreadsheet_1_df = kn.get_spreadsheet_df(spreadsheet_filename_1))
+        spreadsheet_2_df:      samples x phenotypes dataframe
+
+    Returns:
+        spreadsheet_1_trim_df: samples x phenotypes with only sample names in both input dataframes
+        spreadsheet_2_trim_df: samples x phenotypes with only sample names in both input dataframes
+    """
+    spreadsheet_1_gene_names = kn.extract_spreadsheet_gene_names(spreadsheet_1_df)
+    spreadsheet_2_gene_names = kn.extract_spreadsheet_gene_names(spreadsheet_2_df)
+    common_samples_list = kn.find_common_node_names(spreadsheet_1_gene_names, spreadsheet_2_gene_names)
+
+    return spreadsheet_1_df.loc[common_samples_list], spreadsheet_2_df.loc[common_samples_list]
 
 
 def run_select_genes(run_parameters):
     """ Subset genes based on given gene set. Output is a spreadsheet with fewer rows
+
     Args:           run_parameters with keys:
                     "results_directory", "spreadsheet_file_name", "gene_list_file_name"
     """
@@ -116,9 +120,11 @@ def run_select_genes(run_parameters):
 
 def select_genes_df(spreadsheet_df, gene_select_list):
     """ Subset genes based on given gene set. Output is a spreadsheet with fewer rows
+
     Args:
         spreadsheet_df:             genes x samples data frame
         gene_select_list:           list of some gene names in the spreadsheet
+
     Returns:
         spreadsheet_intersected_df: data frame with only the genes in the intersection of input gene names.
     """
@@ -127,9 +133,9 @@ def select_genes_df(spreadsheet_df, gene_select_list):
     return spreadsheet_df.loc[intersection_names]
 
 
-# Merge two phenotype matrices that correspond to same columns.
 def run_merge_df(run_parameters):
     """ Merge two phenotype matrices that correspond to same columns  (Union)
+
     Args:           run_parameters with keys:
                     "results_directory", "spreadsheet_1_file_name", "spreadsheet_2_file_name"
     """
@@ -145,15 +151,17 @@ def run_merge_df(run_parameters):
     write_transform_df(result_df, spreadsheet_1_file_name, transform_name, results_directory)
 
 
-def merge_df(sxp_1_df, sxp_2_df):
+def merge_df(spreadsheet_1_df, spreadsheet_2_df):
     """ Merge two phenotype matrices that correspond to same columns (Union)
+
     Args:
-        sxp_1_df:      samples x phenotypes dataframe (sxp_1_df = kn.get_spreadsheet_df(sxp_filename_1))
-        sxp_2_df:      samples x phenotypes dataframe
+        spreadsheet_1_df:      samples x phenotypes dataframe (spreadsheet_1_df = kn.get_spreadsheet_df(spreadsheet_filename_1))
+        spreadsheet_2_df:      samples x phenotypes dataframe
+
     Returns:
         merged_df:     samples x phenotypes with all rows and sample names in both inputs
     """
-    merged_df = pd.concat([sxp_1_df, sxp_2_df], axis=1)
+    merged_df = pd.concat([spreadsheet_1_df, spreadsheet_2_df], axis=1)
     return merged_df
 
 
@@ -290,8 +298,10 @@ def run_spreadsheet_numerical_transform(run_parameters):
 
 def abs_df(spreadsheet_df):
     """ Basic transformation dataframe to dataframe: absolute value of input spreadsheet.
+
     Args:
         spreadsheet_df: normal orientation is genes (features aka rows) X samples (columns).
+
     Returns:
         abs_df:         same rows and columns with magnitude of all values.
     """
@@ -305,6 +315,7 @@ def z_transform_df(spreadsheet_df, axis=1, ddof=0):
     Args:
         spreadsheet_df: normal orientation is genes (features aka rows) X samples (columns).
         scope:          0 = by rows, 1 = by columns
+
     Returns:
         z_transform_df:
     """
@@ -315,8 +326,10 @@ def z_transform_df(spreadsheet_df, axis=1, ddof=0):
 
 def log_transform_df(spreadsheet_df, log_base=np.exp(1), log_offset=0):
     """ Basic transformation dataframe to dataframe: log of input spreadsheet
+
     Args:
         spreadsheet_df:
+
     Returns:
         log_transform_df:
     """
@@ -478,10 +491,9 @@ def stats_df(spreadsheet_df, stats_function='sum', direction_reference='columns'
     return stats_function_options[stats_function]()
 
 
-"""                                                                                               Module utilities   """
-
 def write_transform_df(spreadsheet_df, spreadsheet_file_name, transform_name, results_directory):
     """ Assemble the file name and write the spreadsheet.
+
     Args:
         spreadsheet_df:         dataframe
         spreadsheet_file_name:  the base filename of the spreadsheet_df before transformation
