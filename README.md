@@ -144,7 +144,10 @@ make env_setup
 * * * 
 ## How to run this pipeline with your data.
 * * * 
-### 1. Copy and edit the TEST_..._options.yml file most appropriate for your transformation, to include the name and location of you file(s) and the options as commented in the file.
+### 1. Copy and edit the TEST_..._options.yml file most appropriate for your transformation, 
+* include the name and location of you file(s) 
+* set additional options as commented in the file
+* set the path to your results directory
 
 ### 2. Run the pipeline from the command line.
 ```
