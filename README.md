@@ -27,7 +27,7 @@ Subset samples based on some row value, e.g., patients with longer survival. Out
 be a smaller spreadsheet and possibly with fewer columns.
 
 <p align="center">
-  <img  src="images/SubsetExpressionBasedonPhenotype.png" height=80>
+  <img  src="images/SubsetExpressionBasedonPhenotype.png" height=120>
 </p>
 
 
@@ -37,7 +37,7 @@ Finds the intersection between two spreadsheets row names and keep the column na
 Output is a  spreadsheet more columns with potentially fewer rows.
 
 <p align="center">
-  <img  src="images/Intersection.png">
+  <img  src="images/Intersection.png" height=120>
 </p>
 
 ## 3. Subset Genes
@@ -45,7 +45,7 @@ Output is a  spreadsheet more columns with potentially fewer rows.
 Subset the initial spreadsheet's rows based on a given row index names set.
 
 <p align="center">
-  <img  src="images/SubsetGenes.png">
+  <img  src="images/SubsetGenes.png height=120">
 </p>
 
 ## 4. Union
@@ -53,7 +53,7 @@ Subset the initial spreadsheet's rows based on a given row index names set.
 Merge two phenotype spreadsheets such that the final spreadsheet contains all columns names and row names.
 
 <p align="center">
-  <img  src="images/Union.png">
+  <img  src="images/Union.png height=120">
 </p>
 
 ## 5.  Group Then Apply a Function
@@ -61,7 +61,7 @@ Merge two phenotype spreadsheets such that the final spreadsheet contains all co
 Given expression spreadsheet and a group-samples-by criterion, create for example the centroid of each group as a signature. 
 
 <p align="center">
-  <img  src="images/GroupThenApplyaFunction.png">
+  <img  src="images/GroupThenApplyaFunction.png height=120">
 </p>
 
 
