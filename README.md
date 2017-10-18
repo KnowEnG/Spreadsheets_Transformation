@@ -45,7 +45,7 @@ Output is a  spreadsheet more columns with potentially fewer rows.
 Subset the initial spreadsheet's rows based on a given row index names set.
 
 <p align="center">
-  <img  src="images/SubsetGenes.png height=120">
+  <img  src="images/SubsetGenes.png" height=120>
 </p>
 
 ## 4. Union
@@ -53,7 +53,7 @@ Subset the initial spreadsheet's rows based on a given row index names set.
 Merge two phenotype spreadsheets such that the final spreadsheet contains all columns names and row names.
 
 <p align="center">
-  <img  src="images/Union.png height=120">
+  <img  src="images/Union.png" height=120>
 </p>
 
 ## 5.  Group Then Apply a Function
@@ -61,7 +61,7 @@ Merge two phenotype spreadsheets such that the final spreadsheet contains all co
 Given expression spreadsheet and a group-samples-by criterion, create for example the centroid of each group as a signature. 
 
 <p align="center">
-  <img  src="images/GroupThenApplyaFunction.png height=120">
+  <img  src="images/GroupThenApplyaFunction.png" height=120>
 </p>
 
 
