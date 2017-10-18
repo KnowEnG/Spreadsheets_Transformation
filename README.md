@@ -12,19 +12,22 @@ There are eight data wrangling methods that one can choose from:
 | Group Then Apply a Function                      | cluster statistics                   | spreadsheet, labels   |
 | Spreadsheet numerical transform                  | numerical transform            | spreadsheet, transformation name|
 | Spreadsheet statistics                           | stats                          | spreadsheet, statistic name|
-| Transpose a spreadsheet                          | run_transpose                        | one spreadsheet |
+| Transpose spreadsheet                            | run_transpose                        | one spreadsheet |
 
 ## Table of Transformtions
 ---
-1. Subset Expression Based on Phenotype
+1. Subset Based on Phenotype category & id
 2. Intersection
 3. Subset Genes
 4. Union
-5. Group Then Apply a Function
+5. Group then apply a function
+6. Spreadsheet numerical transform
+7. Spreadsheet statistics
+8. Spreadsheet transpose
 
-## 1. Subset Expression Based on Phenotype
+## 1. Subset Based on Phenotype category & id
 
-Subset samples based on some row value, e.g., patients with longer survival. Output can 
+Subset samples based on some phenotype column value, e.g., patients with longer survival. Output can 
 be a smaller spreadsheet and possibly with fewer columns.
 
 <p align="center">
@@ -35,7 +38,7 @@ be a smaller spreadsheet and possibly with fewer columns.
 ## 2. Intersection
 
 Finds the intersection between two spreadsheets row names and keep the column names of the two spreadsheets as is.
-Output is a  spreadsheet more columns with potentially fewer rows.
+Output is two spreadsheets with only the genes (rows) in common.
 
 <p align="center">
   <img  src="images/Intersection.png" height=120>
