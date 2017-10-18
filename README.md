@@ -1,43 +1,47 @@
-# Spreadsheets Transformation
+# KnowEnG Spreadsheets Transformation methods
 Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, ...)
 
-There are four clustering methods that one can choose from:
-
+There are eight data wrangling methods that one can choose from:
 
 | **Options**                                      | **Method**                           | **Parameters**       |
 | ------------------------------------------------ | -------------------------------------| -------------------- |
-| Subset Expression Based on Phenotype             | phenotypic subset                    | phenotype_id-category|
-| Intersection                                     | Intersect Samples                    | two spreadsheets     |
-| Subset Genes                                     | subset list of genes                 | spreadsheet-list     |
-| Union                                            | combine rows and columns             | two spreadsheets     |
-| Group Then Apply a Function                      | select columns compute               | spreadsheet-labels   |
-
+| Subset Based on Phenotype category and id        | select subtype                 | spreadsheet, phenotype, id, category|
+| Intersection                                     | common samples                       | two spreadsheets     |
+| Subset Genes                                     | select genes                         | spreadsheet, list     |
+| Union                                            | merge                                | two spreadsheets     |
+| Group Then Apply a Function                      | cluster statistics                   | spreadsheet, labels   |
+| Spreadsheet numerical transform                  | numerical transform            | spreadsheet, transformation name|
+| Spreadsheet statistics                           | stats                          | spreadsheet, statistic name|
+| Spreadsheet transpose                            | run_transpose                        | one spreadsheet |
 
 ## Table of Transformtions
 ---
-1. Subset Expression Based on Phenotype
+1. Subset Based on Phenotype category and id
 2. Intersection
 3. Subset Genes
 4. Union
-5. Group Then Apply a Function
+5. Group then apply a function
+6. Spreadsheet numerical transform
+7. Spreadsheet statistics
+8. Spreadsheet transpose
 
-## 1. Subset Expression Based on Phenotype
+## 1. Subset Based on a Phenotype category and category name
 
-Subset samples based on some row value, e.g., patients with longer survival. Output can 
+Subset samples based on some phenotype column value, e.g., patients with longer survival. Output can 
 be a smaller spreadsheet and possibly with fewer columns.
 
 <p align="center">
-  <img  src="images/SubsetExpressionBasedonPhenotype.png">
+  <img  src="images/SubsetExpressionBasedonPhenotype.png" height=120>
 </p>
 
 
 ## 2. Intersection
 
 Finds the intersection between two spreadsheets row names and keep the column names of the two spreadsheets as is.
-Output is a  spreadsheet more columns with potentially fewer rows.
+Output is two spreadsheets with only the genes (rows) in common.
 
 <p align="center">
-  <img  src="images/Intersection.png">
+  <img  src="images/Intersection.png" height=120>
 </p>
 
 ## 3. Subset Genes
@@ -45,7 +49,7 @@ Output is a  spreadsheet more columns with potentially fewer rows.
 Subset the initial spreadsheet's rows based on a given row index names set.
 
 <p align="center">
-  <img  src="images/SubsetGenes.png">
+  <img  src="images/SubsetGenes.png" height=120>
 </p>
 
 ## 4. Union
@@ -53,27 +57,36 @@ Subset the initial spreadsheet's rows based on a given row index names set.
 Merge two phenotype spreadsheets such that the final spreadsheet contains all columns names and row names.
 
 <p align="center">
-  <img  src="images/Union.png">
+  <img  src="images/Union.png" height=120>
 </p>
 
 ## 5.  Group Then Apply a Function
 
-Given expression spreadsheet and a group-samples-by criterion, create for example the centroid of each group as a signature. 
+Given expression spreadsheet and a group-samples-by criterion, e.g. the mean gene value for each sample-cluster assignment.
 
 <p align="center">
-  <img  src="images/GroupThenApplyaFunction.png">
+  <img  src="images/GroupThenApplyaFunction.png" height=120>
 </p>
 
+## 6. Spreadsheet numerical transform 
+
+Spreadsheet with new numerical values, such as; threshold, log transform, z transform or absolute value.
+
+## 7. Spreadsheet statistics
+
+Spreadsheet measure overall, by rows or columns such as; min, max, sum, mean, median, standard deviation or variation.
+
+## 8. Spreadsheet transpose
+
+Spreadsheet rows x columns transposed to columns x rows.
+
+
 
 * * * 
-## How to run this pipeline with Our data
+## How to run this pipeline with Our data.
 * * * 
-### 1. Clone the Spreadsheets_Transformation Repo
-```
- git clone https://github.com/KnowEnG-Research/Spreadsheets_Transformation.git
-```
- 
-### 2. Install the following (Ubuntu or Linux)
+
+ ### 1. Install the following (Ubuntu or Linux).
   ```
  apt-get install -y python3-pip
  apt-get install -y libfreetype6-dev libxft-dev
@@ -90,13 +103,17 @@ Given expression spreadsheet and a group-samples-by criterion, create for exampl
  pip3 install xmlrunner
 ```
 
-### 3. Change directory to Spreadsheets_Transformatio
-
+### 2. Clone the Spreadsheets_Transformation github repository to your computer.
 ```
-cd Spreadsheets_Transformatio
+ git clone https://github.com/KnowEnG-Research/Spreadsheets_Transformation.git
 ```
 
-### 4. Change directory to test
+### 3. Change directory to Spreadsheets_Transformation.
+```
+cd Spreadsheets_Transformation
+```
+
+### 4. Change to the test directory.
 
 ```
 cd test
@@ -110,14 +127,30 @@ make env_setup
 ### 6. Use one of the following "make" commands to select and run a transformation option:
 
 
-| **Command**         | **Option**                                       | 
+| **Command**         | **Options and input file names**                                       | 
 |:------------------- |:------------------------------------------------ | 
-| make run_spreadsheet_transpose              | Transpose |
-| make run_spreadsheets_common_samples       | Common samples in two spreadsheets|
-| make run_spreadsheets_merge             | Merge two spreadsheets with common header|
-| make run_select_spreadsheet_genes   | Select the genes in a spreadsheet from a list|
-| make run_spreadsheet_clustering_averages  | Get the averages for a labeling of samples in a spreadsheet|
-| make run_spreadsheet_select_pheno_categorical | Select category of a phenotype id. in phenotype and spreadsheet|
-| make run_numerical_tranform | Numerical transformation of a spreadsheet|
-| make run_stat_values | Get a value statistic for a spreadsheet|
+| make run_spreadsheet_transpose              | TEST_1_transpose.yml |
+| make run_spreadsheets_common_samples       | TEST_2_common_samples.yml |
+| make run_spreadsheets_merge             | TEST_3_merge.yml |
+| make run_select_spreadsheet_genes   | TEST_4_select_genes.ym |
+| make run_spreadsheet_clustering_averages  | TEST_5_cluster_averages.yml |
+| make run_spreadsheet_select_pheno_categorical | TEST_6_select_categorical.yml|
+| make run_numerical_tranform | TEST_7_numerical_transform.yml|
+| make run_stat_values | TEST_8_stat_value.yml |
 
+### 7. Ouput files will be written to the results directory named in the Options file, using the name(s) of the input files as appended with the transformation name and a timestamp.
+
+
+* * * 
+## How to run this pipeline with your data.
+* * * 
+### 1. Copy and edit the TEST_..._options.yml file most appropriate for your transformation, 
+* include the name and location of your input file(s) 
+* set additional options as commented in the file
+* set the path to your results directory
+* suggested directory setup is like that created with ```make env_setup```
+
+### 2. Run the pipeline from the command line with the edited options file in the run directory.
+```
+python3 mini_pipelines.py -run_directory your/run_directory/path -run_file your_options.yml
+```
