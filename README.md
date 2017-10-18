@@ -127,14 +127,14 @@ make env_setup
 ### 6. Use one of the following "make" commands to select and run a transformation option:
 
 
-| **Command**         | **Option**                                       | 
+| **Command**         | **Options and input file names**                                       | 
 |:------------------- |:------------------------------------------------ | 
-| make run_spreadsheet_transpose              | Transpose |
-| make run_spreadsheets_common_samples       | Common samples in two spreadsheets|
-| make run_spreadsheets_merge             | Merge two spreadsheets with common header|
-| make run_select_spreadsheet_genes   | Select the genes in a spreadsheet from a list|
-| make run_spreadsheet_clustering_averages  | Get the averages for a labeling of samples in a spreadsheet|
-| make run_spreadsheet_select_pheno_categorical | Select category of a phenotype id. in phenotype and spreadsheet|
-| make run_numerical_tranform | Numerical transformation of a spreadsheet|
-| make run_stat_values | Get a value statistic for a spreadsheet|
+| make run_spreadsheet_transpose              | TEST_1_transpose.yml |
+| make run_spreadsheets_common_samples       | TEST_2_common_samples.yml |
+| make run_spreadsheets_merge             | TEST_3_merge.yml |
+| make run_select_spreadsheet_genes   | TEST_4_select_genes.ym |
+| make run_spreadsheet_clustering_averages  | TEST_5_cluster_averages.yml |
+| make run_spreadsheet_select_pheno_categorical | TEST_6_select_categorical.yml|
+| make run_numerical_tranform | TEST_7_numerical_transform.yml|
+| make run_stat_values | TEST_8_stat_value.yml |
 
