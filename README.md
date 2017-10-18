@@ -148,6 +148,7 @@ make env_setup
 * include the name and location of your input file(s) 
 * set additional options as commented in the file
 * set the path to your results directory
+* suggested directory setup is like that created with ```make env_setup```
 
 ### 2. Run the pipeline from the command line.
 ```
