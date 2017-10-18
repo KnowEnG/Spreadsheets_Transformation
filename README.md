@@ -150,7 +150,7 @@ make env_setup
 * set the path to your results directory
 * suggested directory setup is like that created with ```make env_setup```
 
-### 2. Run the pipeline from the command line.
+### 2. Run the pipeline from the command line with the edited options file in the run directory.
 ```
-python3 mini_pipelines.py -run_directory your_run_directory_path -run_file your_options.yml
+python3 mini_pipelines.py -run_directory your/run_directory/path -run_file your_options.yml
 ```
