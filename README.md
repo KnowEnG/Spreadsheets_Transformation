@@ -139,3 +139,14 @@ make env_setup
 | make run_stat_values | TEST_8_stat_value.yml |
 
 ### 7. Ouput files will be written to the results directory named in the Options file, using the name(s) of the input files as appended with the transformation name and a timestamp.
+
+
+* * * 
+## How to run this pipeline with your data.
+* * * 
+### 1. Copy and edit the TEST_..._options.yml file most appropriate for your transformation, to include the name and location of you file(s) and the options as commented in the file.
+
+### 2. Run the pipeline from the command line.
+```
+python3 mini_pipelines.py -run_directory your_run_directory_path -run_file your_options.yml
+```
