@@ -25,7 +25,7 @@ There are eight data wrangling methods that one can choose from:
 7. Spreadsheet statistics
 8. Spreadsheet transpose
 
-## 1. Subset Based on Phenotype category and id
+## 1. Subset Based on a Phenotype category and category name
 
 Subset samples based on some phenotype column value, e.g., patients with longer survival. Output can 
 be a smaller spreadsheet and possibly with fewer columns.
