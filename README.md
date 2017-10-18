@@ -1,17 +1,18 @@
-# Spreadsheets Transformation
+# KnowEnG Spreadsheets Transformation methods
 Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, ...)
 
-There are four clustering methods that one can choose from:
-
+There are eight data wrangling methods that one can choose from:
 
 | **Options**                                      | **Method**                           | **Parameters**       |
 | ------------------------------------------------ | -------------------------------------| -------------------- |
-| Subset Expression Based on Phenotype             | phenotypic subset                    | phenotype_id-category|
-| Intersection                                     | Intersect Samples                    | two spreadsheets     |
-| Subset Genes                                     | subset list of genes                 | spreadsheet-list     |
+| Subset Expression Based on Phenotype             | select subtype                 | spreadsheet, phenotype, id, category|
+| Intersection                                     | common samples                       | two spreadsheets     |
+| Subset Genes                                     | select genes                         | spreadsheet, list     |
 | Union                                            | combine rows and columns             | two spreadsheets     |
 | Group Then Apply a Function                      | select columns compute               | spreadsheet-labels   |
-
+| Subset Expression Based on Phenotype             | phenotypic subset                    | phenotype_id-category|
+| Subset Expression Based on Phenotype             | phenotypic subset                    | phenotype_id-category|
+| Transpose a spreadsheet                          | run_transpose                        | one spreadsheet |
 
 ## Table of Transformtions
 ---
