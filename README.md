@@ -81,15 +81,12 @@ Spreadsheet measure overall, by rows or columns such as; min, max, sum, mean, me
 Spreadsheet rows x columns transposed to columns x rows.
 
 
+
 * * * 
-## How to run this pipeline with Our data
+## How to run this pipeline with Our data.
 * * * 
-### 1. Clone the Spreadsheets_Transformation Repo
-```
- git clone https://github.com/KnowEnG-Research/Spreadsheets_Transformation.git
-```
- 
-### 2. Install the following (Ubuntu or Linux)
+
+ ### 1. Install the following (Ubuntu or Linux).
   ```
  apt-get install -y python3-pip
  apt-get install -y libfreetype6-dev libxft-dev
@@ -106,13 +103,17 @@ Spreadsheet rows x columns transposed to columns x rows.
  pip3 install xmlrunner
 ```
 
-### 3. Change directory to Spreadsheets_Transformatio
-
+### 2. Clone the Spreadsheets_Transformation github repository to your computer.
 ```
-cd Spreadsheets_Transformatio
+ git clone https://github.com/KnowEnG-Research/Spreadsheets_Transformation.git
 ```
 
-### 4. Change directory to test
+### 3. Change directory to Spreadsheets_Transformation.
+```
+cd Spreadsheets_Transformation
+```
+
+### 4. Change to the test directory.
 
 ```
 cd test
