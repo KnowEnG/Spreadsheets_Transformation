@@ -12,7 +12,7 @@ There are eight data wrangling methods that one can choose from:
 | Group Then Apply a Function                      | cluster statistics                   | spreadsheet, labels   |
 | Spreadsheet numerical transform                  | numerical transform            | spreadsheet, transformation name|
 | Spreadsheet statistics                           | stats                          | spreadsheet, statistic name|
-| Transpose spreadsheet                            | run_transpose                        | one spreadsheet |
+| Spreadsheet transpose                            | run_transpose                        | one spreadsheet |
 
 ## Table of Transformtions
 ---
@@ -62,11 +62,23 @@ Merge two phenotype spreadsheets such that the final spreadsheet contains all co
 
 ## 5.  Group Then Apply a Function
 
-Given expression spreadsheet and a group-samples-by criterion, create for example the centroid of each group as a signature. 
+Given expression spreadsheet and a group-samples-by criterion, e.g. the mean gene value for each sample-cluster assignment.
 
 <p align="center">
   <img  src="images/GroupThenApplyaFunction.png" height=120>
 </p>
+
+## 6. Spreadsheet numerical transform 
+
+Spreadsheet with new numerical values, such as; threshold, log transform, z transform or absolute value.
+
+## 7. Spreadsheet statistics
+
+Spreadsheet measure overall, by rows or columns such as; min, max, sum, mean, median, standard deviation or variation.
+
+## 8. Spreadsheet transpose
+
+Spreadsheet rows x columns transposed to columns x rows.
 
 
 * * * 
