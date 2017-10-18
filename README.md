@@ -27,7 +27,7 @@ Subset samples based on some row value, e.g., patients with longer survival. Out
 be a smaller spreadsheet and possibly with fewer columns.
 
 <p align="center">
-  <img  src="images/SubsetExpressionBasedonPhenotype.png">
+  <img  src="images/SubsetExpressionBasedonPhenotype.png" height=80>
 </p>
 
 
