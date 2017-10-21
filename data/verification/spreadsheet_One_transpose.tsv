@@ -1,0 +1,8 @@
+	TCGA-A5-A0G1	TCGA-A5-A0G3	TCGA-A5-A0G5	TCGA-A5-A0GA	TCGA-A5-A0GB	TCGA-A5-A0GE	TCGA-A5-A0GG	TCGA-A5-A0GI	TCGA-A5-A0GJ	TCGA-A5-A0GN	TCGA-A5-A0GP	TCGA-A5-A0GR	TCGA-A5-A0GU	TCGA-A5-A0GV	TCGA-A5-A0GW	TCGA-A5-A0GX	TCGA-A5-A0R6	TCGA-A5-A0R7	TCGA-A5-A0R8	TCGA-A5-A0R9	TCGA-A5-A0RA	TCGA-A5-A0VO
+days_to_death	3251.0			543.0																		
+days_to_last		1079.0	790.0		275.0	2717.0	2516.0	1750.0	1447.0	1477.0	1087.0	780.0	495.0	485.0	385.0	924.0	369.0	40.0	125.0	294.0	555.0	128.0
+days_survival	3251	1079	790	543	275	2717	2516	1750	1447	1477	1087	780	495	485	385	924	369	40	125	294	555	128
+diag_age	67	61	73	67	65	38	76	63	44	65	58	69	58	67	46	53	64	55	81	51	68	64
+race	white	black or african american	black or african american	white	white	asian	black or african american	white	white	white	asian	black or african american	white	white	asian	white		white	white	white	white	white
+ethnicity	not hispanic or latino			not hispanic or latino		not hispanic or latino	not hispanic or latino	not hispanic or latino	not hispanic or latino	not hispanic or latino	not hispanic or latino	not hispanic or latino		not hispanic or latino	not hispanic or latino			not hispanic or latino	not hispanic or latino	not hispanic or latino	not hispanic or latino	not hispanic or latino
+gender	female	female	female	female	female	female	female	female	female	female	female	female	female	female	female	female	female	female	female	female	female	female
