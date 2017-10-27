@@ -1,6 +1,6 @@
 method:                      numeric_transform
 
-spreadsheet_name_full_path:  ../data/spreadsheets/spreadsheet_A_.G.tsv
+spreadsheet_name_full_path:  ../data/spreadsheets/other_transforms_spreadsheet.tsv
 results_directory:           ./run_dir/results
 
 numeric_function:            abs # [abs, z_transform, log_transform, threshold]

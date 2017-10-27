@@ -7,7 +7,7 @@ ENV SRC_LOC /home
 RUN pip3 install -I knpackage dispy 
 
 # Clone from github
-RUN git clone https://github.com/KnowEnG-Research/Spreadsheets_Transformation.git ${SRC_LOC} 
+RUN git clone https://dlanier:black396Bean!@github.com/KnowEnG-Research/Spreadsheets_Transformation.git ${SRC_LOC} 
 
 # Set up working directory
 WORKDIR ${SRC_LOC}

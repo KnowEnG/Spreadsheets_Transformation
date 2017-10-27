@@ -1,7 +1,7 @@
 # Turn one spreadsheet into one with only those genes selected from an input list, and write to an output file name specified
 method:                 select_genes_df
 
-spreadsheet_file_name:  ../data/spreadsheets/gene_samples_1.tsv
-gene_list_file_name:    ../data/spreadsheets/gene_samples_1_list.txt
+spreadsheet_file_name:  ../data/spreadsheets/select_rows_spreadsheet.tsv
+gene_list_file_name:    ../data/spreadsheets/select_rows_list.txt
 
 results_directory:      ./run_dir/results

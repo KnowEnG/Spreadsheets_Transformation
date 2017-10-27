@@ -1,7 +1,7 @@
 # Combine two spreadsheets into one with all samples and phenotypes  and write to output file name specified
 method:                     merge_df
 
-spreadsheet_1_file_name:    ../data/spreadsheets/spreadsheet_One.txt
-spreadsheet_2_file_name:    ../data/spreadsheets/spreadsheet_Two.txt
+spreadsheet_1_file_name:    ../data/spreadsheets/merge_spreadsheet_A.txt
+spreadsheet_2_file_name:    ../data/spreadsheets/merge_spreadsheet_B.txt
 
 results_directory:          ./run_dir/results
