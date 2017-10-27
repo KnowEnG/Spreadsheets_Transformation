@@ -3,7 +3,7 @@ method:                       cluster_statistics_df
 
 centroid_statistic:           'median' # ['std', 'median', 'mean']
 
-spreadsheet_file_name:     ../data/spreadsheets/gene_samples_small.tsv
-sample_labels_file_name:   ../data/spreadsheets/gene_samples_small_labels.tsv
+spreadsheet_file_name:     ../data/spreadsheets/average_spreadsheet.tsv
+sample_labels_file_name:   ../data/spreadsheets/average_labels.tsv
 
 results_directory:            ./run_dir/results

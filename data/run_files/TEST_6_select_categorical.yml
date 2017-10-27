@@ -2,8 +2,8 @@
 # only the samples corresponding to a category in a phenotype and write to output files names specified
 method:                                   select_subtype_df
 
-spreadsheet_file_name:                    ../data/spreadsheets/tcga_ucec_somatic_mutation_data.df
-phenotype_file_name:                      ../data/spreadsheets/UCEC_phenotype.txt
+spreadsheet_file_name:                    ../data/spreadsheets/select_phenotype_spreadsheet.df
+phenotype_file_name:                      ../data/spreadsheets/select_phenotype_phenotype.txt
 phenotype_id:                             "hist_simple"
 select_category:                          "serous adenocarcinoma"
 

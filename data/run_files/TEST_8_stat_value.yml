@@ -1,6 +1,6 @@
 method:                 stats_df
 
-spreadsheet_file_name:  ../data/spreadsheets/gene_samples_1.tsv
+spreadsheet_file_name:  ../data/spreadsheets/descriptive_statistic_spreadsheet.tsv
 
 stats_function:          sum     # ['min', 'max', 'mean', 'median', 'variation', 'std_deviation', 'sum']
 direction_reference:     columns # ['columns', 'rows', 'all']
