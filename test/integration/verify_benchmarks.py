@@ -15,7 +15,7 @@ def verify_benchmark(algo_name, BENCHMARK_name_list, BENCHMARK_YML):
     print('BENCHMARK_YML', BENCHMARK_YML)
     for list_member in BENCHMARK_name_list:
         print('\t',list_member)
-    run_command = 'python3 ../src/mini_pipelines.py -run_directory ./run_dir -run_file ' + BENCHMARK_YML
+    run_command = 'python3 ../src/spreadsheets_transformation_pipelines.py -run_directory ./run_dir -run_file ' + BENCHMARK_YML
     os.system(run_command)
 
     All_files_in_results_dir = os.listdir(results_dir)

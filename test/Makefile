@@ -1,4 +1,4 @@
-SCRIPT = ../src/mini_pipelines.py
+SCRIPT = ../src/spreadsheets_transformation_pipelines.py
 RUN_DIR = ./run_dir
 RUN_FILES = ../data/run_files
 RESULTS_DIR = $(RUN_DIR)/results
