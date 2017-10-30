@@ -180,8 +180,8 @@ jupyter notebook
 
 ### 4. The Jupyter notebook server should open in your default browser - if not follow the directions in the terminal.
 
-### 5. In the notbook server window navigate to the directory with the Spreadsheets_Transformation.ipynb notebook and click on it to start it in an new tab.
+* In the notbook server window navigate to the directory with the Spreadsheets_Transformation.ipynb notebook and click on it to start it in an new tab.
 
-### 6. If you don't see a simple page with forms and buttons then you will have to select "Cell" > "Run All" in the Jupyter menu.
+* If you don't see a simple page with forms and buttons then you will have to select "Cell" > "Run All" in the Jupyter menu.
 
-### 7. You may upload your files in the notebook server window or use the default files. The output will be in the "results" directory.
+* You may upload your files in the notebook server window or use the default files. The output will be in the "results" directory.
