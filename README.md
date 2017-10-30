@@ -1,7 +1,10 @@
-# KnowEnG Spreadsheets Transformation methods
-Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, ...)
+# KnowEnG Spreadsheets Transformation pipeline
 
-There are eight data wrangling methods that one can choose from:
+This is the Knowledge Engine for Genomics (KnowEnG), an NIH BD2K Center of Excellence, Spreadsheets Transformation Pipeline.
+
+This pipeline applies various transformations to one or more Spreadsheets (Genomic, Phenotypic, ...)
+
+There are eight transformation methods that one can choose from:
 
 | **Options**                                      | **Method**                           | **Parameters**       |
 | ------------------------------------------------ | -------------------------------------| -------------------- |
