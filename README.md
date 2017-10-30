@@ -156,3 +156,30 @@ make env_setup
 ```
 python3 mini_pipelines.py -run_directory your/run_directory/path -run_file your_options.yml
 ```
+
+* * *
+## How to run the Spreadsheets_Transformation.ipynb Jupyter notebook.
+* * * 
+
+### 1. Install Jupyter.
+```
+http://jupyter.readthedocs.io/en/latest/install.html
+```
+
+### 2. Clone this repository using the directions in step 2 above.
+```
+git clone https://github.com/KnowEnG-Research/Spreadsheets_Transformation.git
+```
+
+### 3. Start the jupyter notebook server at the command prompt.
+```
+jupyter notebook
+```
+
+### 4. The Jupyter notebook server should open in your default browser - if not follow the directions in the terminal.
+
+### 5. In the notbook server window navigate to the directory with the Spreadsheets_Transformation.ipynb notebook and click on it to start it in an new tab.
+
+### 6. If you don't see a simple page with forms and buttons then you will have to select "Cell" > "Run All" in the Jupyter menu.
+
+### 7. You may upload your files in the notebook server window or use the default files. The output will be in the "results" directory.
