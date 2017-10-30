@@ -31,7 +31,7 @@ Subset samples based on some phenotype column value, e.g., patients with longer 
 be a smaller spreadsheet and possibly with fewer columns.
 
 <p align="center">
-  <img  src="images/SubsetExpressionBasedonPhenotype.png" height=120>
+  <img  src="data/images/SubsetExpressionBasedonPhenotype.png" height=120>
 </p>
 
 
@@ -41,7 +41,7 @@ Finds the intersection between two spreadsheets row names and keep the column na
 Output is two spreadsheets with only the genes (rows) in common.
 
 <p align="center">
-  <img  src="images/Intersection.png" height=120>
+  <img  src="data/images/Intersection.png" height=120>
 </p>
 
 ## 3. Subset Genes
@@ -49,7 +49,7 @@ Output is two spreadsheets with only the genes (rows) in common.
 Subset the initial spreadsheet's rows based on a given row index names set.
 
 <p align="center">
-  <img  src="images/SubsetGenes.png" height=120>
+  <img  src="data/images/SubsetGenes.png" height=120>
 </p>
 
 ## 4. Union
@@ -57,7 +57,7 @@ Subset the initial spreadsheet's rows based on a given row index names set.
 Merge two phenotype spreadsheets such that the final spreadsheet contains all columns names and row names.
 
 <p align="center">
-  <img  src="images/Union.png" height=120>
+  <img  src="data/images/Union.png" height=120>
 </p>
 
 ## 5.  Group Then Apply a Function
@@ -65,7 +65,7 @@ Merge two phenotype spreadsheets such that the final spreadsheet contains all co
 Given expression spreadsheet and a group-samples-by criterion, e.g. the mean gene value for each sample-cluster assignment.
 
 <p align="center">
-  <img  src="images/GroupThenApplyaFunction.png" height=120>
+  <img  src="data/images/GroupThenApplyaFunction.png" height=120>
 </p>
 
 ## 6. Spreadsheet numerical transform 
