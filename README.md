@@ -1,4 +1,4 @@
-# KnowEnG Spreadsheets Transformation pipeline
+# KnowEnG's Spreadsheets Transformation pipeline
 
 This is the Knowledge Engine for Genomics (KnowEnG), an NIH BD2K Center of Excellence, Spreadsheets Transformation Pipeline.
 
