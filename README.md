@@ -161,9 +161,11 @@ python3 mini_pipelines.py -run_directory your/run_directory/path -run_file your_
 ## How to run the Spreadsheets_Transformation.ipynb Jupyter notebook.
 * * * 
 
-### 1. Install Jupyter.
+### 1. Install Jupyter and the widgets.
 ```
 http://jupyter.readthedocs.io/en/latest/install.html
+
+http://ipywidgets.readthedocs.io/en/stable/user_install.html
 ```
 
 ### 2. Clone this repository using the directions in step 2 above.
