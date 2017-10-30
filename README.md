@@ -95,15 +95,14 @@ Spreadsheet rows x columns transposed to columns x rows.
  apt-get install -y libfreetype6-dev libxft-dev
  apt-get install -y libblas-dev liblapack-dev libatlas-base-dev gfortran
 
- pip3 install pyyaml
- pip3 install knpackage
- pip3 install redis
  pip3 install numpy==1.11.1
  pip3 install pandas==0.18.1 
  pip3 install scipy==0.18.0
  pip3 install scikit-learn==0.17.1
  pip3 install matplotlib==1.4.2
+ pip3 install pyyaml
  pip3 install xmlrunner
+ pip3 install knpackage
 ```
 
 ### 2. Clone the Spreadsheets_Transformation github repository to your computer.
