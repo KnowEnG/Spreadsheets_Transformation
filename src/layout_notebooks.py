@@ -226,3 +226,21 @@ def get_single_file_execute_button(input_data_dir, results_dir, file_selector, b
     sinble_file_execute_button.file_selector = file_selector  # transpose_flistbx
 
     return sinble_file_execute_button
+
+def get_two_files_execute_button(input_data_dir, results_dir, file_select_dict, button_name='run'):
+    """ get an execute - view button for multiple files - callback set after return """
+    two_files_execute_button = widgets.Button(
+        description=button_name,
+        disabled=False,
+        button_style='',
+        tooltip='execute selected file')
+
+    two_files_execute_button.input_data_directory = input_data_dir
+    two_files_execute_button.results_directory = results_dir
+    two_files_execute_button.view_box = get_view_box()
+
+    two_files_execute_button.file_1_selector = file_select_dict['file_1_selector']
+    two_files_execute_button.file_2_selector = file_select_dict['file_2_selector']
+
+    return two_files_execute_button
+
