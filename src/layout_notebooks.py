@@ -56,6 +56,11 @@ def show_select_view_button(button):
     display(widgets.Box([button.file_selector, button], layout=box_layout))
     display(button.view_box)
 
+def show_execute_button(button):
+    display(widgets.HBox([button], layout=right_buttons_style_box_layout))
+    display(button.view_box)
+    # show_widget_right(get_numerical_function_execute_button)
+    # display(get_numerical_function_execute_button.view_box)
 
 def show_cell_title(title_string):
     """ display title string as html heading
