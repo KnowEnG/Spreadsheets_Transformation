@@ -24,8 +24,6 @@ if len(USER_BASE_DIRECTORIES_LIST) < 1 or not USER_RESULTS_DIRECTORY in USER_BAS
     os.mkdir(USER_RESULTS_DIRECTORY)
 
 #                                                                               legacy cell-code alias
-results_dir = USER_RESULTS_DIRECTORY
-input_data_dir = USER_DATA_DIRECTORY
 
 USER_DATAFILE_EXTENSIONS_LIST = ['.tsv', '.txt', '.df', '.gz']
 
@@ -54,6 +52,34 @@ labels_style_layout            = widgets.Layout(display='flex',
                                                 justify_content='flex-end',
                                                 width='20%')
 
+def show_select_view_button(button):
+    display(widgets.Box([button.file_selector, button], layout=box_layout))
+    display(button.view_box)
+
+
+def show_cell_title(title_string):
+    """ display title string as html heading
+    Args:
+        title_string:    a python string type
+    """
+    title_string = "<h2>" + title_string + "</h2>"
+    display(widgets.HTML(title_string))
+
+
+def show_widget_right(one_widget):
+    """ right justify widget  """
+    display(widgets.HBox([one_widget], layout=right_buttons_style_box_layout))
+
+
+def show_widget_left(one_widget):
+    """ left justify widget """
+    display(widgets.HBox([one_widget], layout=left_buttons_style_box_layout))
+
+
+def show_select_view(list_box, view_button):
+    """ standard layout for files list box and view button """
+    display(widgets.Box([list_box, view_button], layout=box_layout))
+
 
 def user_data_list(target_dir, FEXT):
     """ user_file_list = update_user_data_list(user_data_dir, FEXT)
@@ -74,14 +100,14 @@ def user_data_list(target_dir, FEXT):
     return my_file_list
 
 
-def get_dropdown_files_listbox():
+def get_dropdown_files_listbox(data_directory=USER_DATA_DIRECTORY, file_types=USER_DATAFILE_EXTENSIONS_LIST):
     """ user_data dropdown listbox
     
     Returns: 
         files_dropdown_stock_box:  IPywidgets.Dropdown listbox with contents of user_data as options.
     """
     files_dropdown_stock_box = widgets.Dropdown(
-        options=user_data_list(input_data_dir, USER_DATAFILE_EXTENSIONS_LIST),
+        options=user_data_list(data_directory, file_types),
         description='',
         layout=lisbox_layout,
     )
@@ -96,7 +122,7 @@ def update_user_data(button):
     Args:
         button:        IPywidget Button
     """
-    files_dropdown_main.options = user_data_list(input_data_dir, USER_DATAFILE_EXTENSIONS_LIST)
+    files_dropdown_main.options = user_data_list(USER_DATA_DIRECTORY, USER_DATAFILE_EXTENSIONS_LIST)
 
 
 def flistbx_update(change):
@@ -146,7 +172,7 @@ def visualize_selected_file(button):
                     S = S + str(df.shape) + '    ' + f_name + Step.to_html()
             button.view_box.value = S
         else: 
-            full_fname = os.path.join(input_data_dir, button.file_selector.value)
+            full_fname = os.path.join(USER_DATA_DIRECTORY, button.file_selector.value)
             df = pd.read_csv(full_fname, sep='\t', header=0, index_col=0)
             if hasattr(button, 'view_full_file') == True and button.view_full_file == True:
                 button.view_box.value = df.to_html()
@@ -165,24 +191,33 @@ def visualize_selected_file(button):
     except:
         button.view_box.value = "Invalid input data "
 
-        
-def show_cell_title(title_string):
-    """ display title string as html heading """
-    title_string = "<h2>" + title_string + "</h2>"
-    display(widgets.HTML(title_string))
 
-    
-def show_widget_right(one_widget):
-    """ right justify widget """
-    display(widgets.HBox([one_widget], layout=right_buttons_style_box_layout))
-    
-    
-def show_widget_left(one_widget):
-    """ left justify widget """
-    display(widgets.HBox([one_widget], layout=left_buttons_style_box_layout))
-    
-    
-def show_select_view(list_box, view_button):
-    """ standard layout for files list box and view button """
-    display(widgets.Box([list_box, view_button], layout=box_layout))
-    
+def get_select_view_file_button_set(data_directory, button_name='View'):
+    """ get a view button with file select listbox and a file view box """
+    select_file_button = widgets.Button(description=button_name,
+                                           disabled=False,
+                                           button_style='',
+                                           tooltip='visualize selected file')
+
+    select_file_button.view_box = get_view_box()
+    select_file_button.file_selector = get_dropdown_files_listbox(data_directory)
+    select_file_button.file_selector.data_directory = data_directory
+    select_file_button.on_click(visualize_selected_file)
+
+    return  select_file_button
+
+
+def get_single_file_execute_button(input_data_dir, results_dir, file_selector, button_name='run'):
+    """ get an execute - view button for a single input file - callback set after return """
+    sinble_file_execute_button = widgets.Button(
+        description=button_name,
+        disabled=False,
+        button_style='',
+        tooltip='execute selected file')
+
+    sinble_file_execute_button.input_data_directory = input_data_dir
+    sinble_file_execute_button.results_directory = results_dir
+    sinble_file_execute_button.view_box = get_view_box()
+    sinble_file_execute_button.file_selector = file_selector  # transpose_flistbx
+
+    return sinble_file_execute_button
