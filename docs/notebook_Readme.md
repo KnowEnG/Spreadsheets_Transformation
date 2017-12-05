@@ -35,12 +35,12 @@ There are eight transformation methods that one can choose from:
  
 ### If your browser allows auto-initialization you will see a screen like this.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/initialized_cells.png" height=220>
 </p>
 
 ### If not, and the code is showing, use the _Cell_ menu to _Run All_
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/uninitialized_cells.png" height=220>
 </p>
 
 ### Click on the **View** button to see the top of the selected file.
