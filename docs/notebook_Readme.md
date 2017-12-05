@@ -40,23 +40,23 @@ There are eight transformation methods that one can choose from:
 
 ### If not, and the code is showing, use the _Cell_ menu to _Run All_
 <p align="center">
-  <img  src="../data/images/uninitialized_cells.png" height=220>
+  <img  src="../data/images/uninitialized_cells.png" height=320>
 </p>
 
 ### Click on the **View** button to see the top of the selected file.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/Intersection.png" height=320>
 </p>
 
 ### Use listboxes to select parameters where they are shown.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/Intersection.png" height=320>
 </p>
 
 ### Use the _Kernel_ menu _Restart and Clear Output_ to clear error messages (and all output).
 
 <p align="center">
-  <img  src="../data/images/select_restart.png" height=220>
+  <img  src="../data/images/select_restart.png" height=320>
 </p>
  ---
 ## 2) Example Transpose a file Using the default data:
@@ -64,12 +64,12 @@ There are eight transformation methods that one can choose from:
 
 ### Click on the **View** button to see the top of the spreadsheet file.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/Intersection.png" height=320>
 </p>
 
 ### Click on the **View** button to see the top of the spreadsheet file.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/Intersection.png" height=320>
 </p>
 
 ## 3) Upload, view and transform your data:
