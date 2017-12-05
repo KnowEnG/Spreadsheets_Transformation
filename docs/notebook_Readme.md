@@ -43,16 +43,15 @@ There are eight transformation methods that one can choose from:
   <img  src="../data/images/select_pheno.png" height=320>
 </p>
 
-### Click on the action button (named by the transform) to display and write the file to _results_.
+### Click on the action button (named by the transform) to display and write the file (s) to _results_.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=320>
+  <img  src="../data/images/execute_button.png" height=320>
 </p>
+ ---
 
-
-### Use the _Kernel_ menu _Restart and Clear Output_ to clear error messages (and all output).
-
+### Use _Kernel_ menu _Restart and Clear Output_ to clear error messages (and all dispalyed output).
 <p align="center">
-  <img  src="../data/images/select_restart.png" height=320>
+  <img  src="../data/images/restart_notebook.png" height=320>
 </p>
  ---
 ## 2) Example Transpose a file Using the default data:
