@@ -40,7 +40,7 @@ There are eight transformation methods that one can choose from:
 
 ### Use listboxes to select parameters where they are shown.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=320>
+  <img  src="../data/images/select_pheno.png" height=320>
 </p>
 
 ### Click on the action button (named by the transform) to display and write the file to _results_.
