@@ -6,17 +6,6 @@ This pipeline applies various transformations to one or more Spreadsheets (Genom
 
 There are eight transformation methods that one can choose from:
 
-| **Options**                                      | **Method**                           | **Parameters**       |
-| ------------------------------------------------ | -------------------------------------| -------------------- |
-| Subset Based on Phenotype category and id        | select subtype                 | spreadsheet, phenotype, id, category|
-| Intersection                                     | common samples                       | two spreadsheets     |
-| Subset Genes                                     | select genes                         | spreadsheet, list     |
-| Union                                            | merge                                | two spreadsheets     |
-| Group Then Apply a Function                      | cluster statistics                   | spreadsheet, labels   |
-| Spreadsheet numerical transform                  | numerical transform            | spreadsheet, transformation name|
-| Spreadsheet statistics                           | stats                          | spreadsheet, statistic name|
-| Spreadsheet transpose                            | run_transpose                        | one spreadsheet |
-
 ## Table of Transformtions
 ---
 1. Subset Based on Phenotype category and id
@@ -30,6 +19,7 @@ There are eight transformation methods that one can choose from:
 
 # Using the KnowEnG Spreadsheets_Transformation.ipynb notebook.
  ---
+ 
 ## 1) Start the notebook code:
  ---
  
