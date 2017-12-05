@@ -67,20 +67,20 @@ There are eight transformation methods that one can choose from:
 </p>
 #### Click the _upload_ button to browse your computers files.
 <p align="center">
-  <img  src="../data/images/upload_button.png" height=220>
+  <img  src="../data/images/upload_button.png" height=320>
 </p>
 #### Click the highlighted _upload_ button begin the upload.
 <p align="center">
-  <img  src="../data/images/upload_button_2.png" height=220>
+  <img  src="../data/images/upload_button_2.png" height=120>
 </p>
 #### The file will appear in alphabetical order when the upload is complete.
 <p align="center">
-  <img  src="../data/images/upload_button_3.png" height=220>
+  <img  src="../data/images/upload_button_3.png" height=120>
 </p>
 
 ### Rename, download or delete your files in the _user_data_ or _results_ directory.
 <p align="center">
-  <img  src="../data/images/rename_download_or_delete.png" height=320>
+  <img  src="../data/images/rename_download_or_delete.png" height=220>
 </p>
 
 
