@@ -1,4 +1,4 @@
-# KnowEnG's Spreadsheets Transformation Jupyter notebook-operation of pipeline 
+# KnowEnG's Spreadsheets Transformation Jupyter notebook
 
 This is the Knowledge Engine for Genomics (KnowEnG), an NIH BD2K Center of Excellence, Spreadsheets Transformation Pipeline.
 
@@ -27,3 +27,34 @@ There are eight transformation methods that one can choose from:
 6. Spreadsheet numerical transform
 7. Spreadsheet statistics
 8. Spreadsheet transpose
+
+# Using the KnowEnG Spreadsheets_Transformation.ipynb notebook.
+ ---
+## 1) Start the notebook code:
+
+### If your browser allows auto-initialization you will see this screen.
+<p align="center">
+  <img  src="../data/images/Intersection.png" height=220>
+</p>
+
+### If not, and the code is showing, use the _Cell_ menu to _Run All_
+
+<p align="center">
+  <img  src="../data/images/Intersection.png" height=220>
+</p>
+
+### Click on the **View** button to see the top of the phenotype file.
+<p align="center">
+  <img  src="../data/images/Intersection.png" height=220>
+</p>
+
+### Use listboxes to select columns for: ClusterID, Event and Time; click the **Show** button.
+<p align="center">
+  <img  src="../data/images/Intersection.png" height=220>
+</p>
+
+### Use the _Kernel_ menu _Restart and Clear Output_ to clear error messages (and all output).
+
+<p align="center">
+  <img  src="../data/images/select_restart.png" height=220>
+</p>
