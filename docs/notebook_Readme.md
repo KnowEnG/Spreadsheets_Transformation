@@ -47,28 +47,36 @@ There are eight transformation methods that one can choose from:
 <p align="center">
   <img  src="../data/images/execute_button.png" height=320>
 </p>
- ---
 
 ### Use _Kernel_ menu _Restart and Clear Output_ to clear error messages (and all dispalyed output).
 <p align="center">
   <img  src="../data/images/restart_notebook.png" height=320>
 </p>
- ---
-## 2) Example Transpose a file Using the default data:
- ---
-
-### Click on the **View** button to see the top of the spreadsheet file.
-<p align="center">
-  <img  src="../data/images/Intersection.png" height=320>
-</p>
-
-### Click on the **View** button to see the top of the spreadsheet file.
-<p align="center">
-  <img  src="../data/images/Intersection.png" height=320>
-</p>
+ 
 
 ## 3) Upload, view and transform your data:
  ---
 
-
 ### Use the _File_ menu _Open_ to open the _user_data_ directory.
+<p align="center">
+  <img  src="../data/images/file_open.png" height=320>
+</p>
+<p align="center">
+  <img  src="../data/images/user_data.png" height=320>
+</p>
+<p align="center">
+  <img  src="../data/images/upload_button.png" height=320>
+</p>
+<p align="center">
+  <img  src="../data/images/upload_button_2.png" height=320>
+</p>
+<p align="center">
+  <img  src="../data/images/upload_button_3.png" height=320>
+</p>
+
+### Rename, download or delete your files in the _user_data_ or _results_ directory.
+<p align="center">
+  <img  src="../data/images/rename_download_or_delete.png" height=320>
+</p>
+
+
