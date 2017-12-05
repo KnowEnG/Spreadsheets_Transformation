@@ -35,7 +35,7 @@ There are eight transformation methods that one can choose from:
  
 ### If your browser allows auto-initialization you will see a screen like this.
 <p align="center">
-  <img  src="../data/images/initialized_cells.png" height=220>
+  <img  src="../data/images/initialized_cells.png" height=320>
 </p>
 
 ### If not, and the code is showing, use the _Cell_ menu to _Run All_
