@@ -33,15 +33,21 @@ There are eight transformation methods that one can choose from:
   <img  src="../data/images/uninitialized_cells.png" height=320>
 </p>
 
-### Click on the **View** button to see the top of the selected file.
+### Click on any **View** button to see the top of the selected file, click again on **Clear** to hide.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=320>
+  <img  src="../data/images/view_button.png" height=320>
 </p>
 
 ### Use listboxes to select parameters where they are shown.
 <p align="center">
   <img  src="../data/images/Intersection.png" height=320>
 </p>
+
+### Click on the action button (named by the transform) to display and write the file to _results_.
+<p align="center">
+  <img  src="../data/images/Intersection.png" height=320>
+</p>
+
 
 ### Use the _Kernel_ menu _Restart and Clear Output_ to clear error messages (and all output).
 
