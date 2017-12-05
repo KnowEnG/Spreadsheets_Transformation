@@ -31,7 +31,8 @@ There are eight transformation methods that one can choose from:
 # Using the KnowEnG Spreadsheets_Transformation.ipynb notebook.
  ---
 ## 1) Start the notebook code:
-
+ ---
+ 
 ### If your browser allows auto-initialization you will see this screen.
 <p align="center">
   <img  src="../data/images/Intersection.png" height=220>
@@ -58,3 +59,22 @@ There are eight transformation methods that one can choose from:
 <p align="center">
   <img  src="../data/images/select_restart.png" height=220>
 </p>
+
+## 2) Example Transpose a file Using the default data:
+ ---
+
+### Click on the **View** button to see the top of the spreadsheet file.
+<p align="center">
+  <img  src="../data/images/Intersection.png" height=220>
+</p>
+
+### Click on the **View** button to see the top of the spreadsheet file.
+<p align="center">
+  <img  src="../data/images/Intersection.png" height=220>
+</p>
+
+## 3) Upload, view and transform your data:
+ ---
+
+
+### Use the _File_ menu _Open_ to open the _user_data_ directory.
