@@ -54,7 +54,7 @@ There are eight transformation methods that one can choose from:
 </p>
  
 
-## 3) Upload, view and transform your data:
+## 2) Upload, view and transform your data:
  ---
 
 ### Use the _File_ menu _Open_ . 
