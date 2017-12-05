@@ -6,17 +6,6 @@ This pipeline applies various transformations to one or more Spreadsheets (Genom
 
 There are eight transformation methods that one can choose from:
 
-| **Options**                                      | **Method**                           | **Parameters**       |
-| ------------------------------------------------ | -------------------------------------| -------------------- |
-| Subset Based on Phenotype category and id        | select subtype                 | spreadsheet, phenotype, id, category|
-| Intersection                                     | common samples                       | two spreadsheets     |
-| Subset Genes                                     | select genes                         | spreadsheet, list     |
-| Union                                            | merge                                | two spreadsheets     |
-| Group Then Apply a Function                      | cluster statistics                   | spreadsheet, labels   |
-| Spreadsheet numerical transform                  | numerical transform            | spreadsheet, transformation name|
-| Spreadsheet statistics                           | stats                          | spreadsheet, statistic name|
-| Spreadsheet transpose                            | run_transpose                        | one spreadsheet |
-
 ## Table of Transformtions
 ---
 1. Subset Based on Phenotype category and id
@@ -30,33 +19,40 @@ There are eight transformation methods that one can choose from:
 
 # Using the KnowEnG Spreadsheets_Transformation.ipynb notebook.
  ---
+ 
 ## 1) Start the notebook code:
  ---
  
 ### If your browser allows auto-initialization you will see a screen like this.
 <p align="center">
-  <img  src="../data/images/initialized_cells.png" height=220>
+  <img  src="../data/images/initialized_cells.png" height=320>
 </p>
 
 ### If not, and the code is showing, use the _Cell_ menu to _Run All_
 <p align="center">
-  <img  src="../data/images/uninitialized_cells.png" height=220>
+  <img  src="../data/images/uninitialized_cells.png" height=320>
 </p>
 
-### Click on the **View** button to see the top of the selected file.
+### Click on any **View** button to see the top of the selected file, click again on **Clear** to hide.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/view_button.png" height=320>
 </p>
 
 ### Use listboxes to select parameters where they are shown.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/select_pheno.png" height=320>
 </p>
+
+### Click on the action button (named by the transform) to display and write the file to _results_.
+<p align="center">
+  <img  src="../data/images/Intersection.png" height=320>
+</p>
+
 
 ### Use the _Kernel_ menu _Restart and Clear Output_ to clear error messages (and all output).
 
 <p align="center">
-  <img  src="../data/images/select_restart.png" height=220>
+  <img  src="../data/images/select_restart.png" height=320>
 </p>
  ---
 ## 2) Example Transpose a file Using the default data:
@@ -64,12 +60,12 @@ There are eight transformation methods that one can choose from:
 
 ### Click on the **View** button to see the top of the spreadsheet file.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/Intersection.png" height=320>
 </p>
 
 ### Click on the **View** button to see the top of the spreadsheet file.
 <p align="center">
-  <img  src="../data/images/Intersection.png" height=220>
+  <img  src="../data/images/Intersection.png" height=320>
 </p>
 
 ## 3) Upload, view and transform your data:
