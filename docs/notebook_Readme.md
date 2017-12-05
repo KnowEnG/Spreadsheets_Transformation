@@ -33,23 +33,22 @@ There are eight transformation methods that one can choose from:
 ## 1) Start the notebook code:
  ---
  
-### If your browser allows auto-initialization you will see this screen.
+### If your browser allows auto-initialization you will see a screen like this.
 <p align="center">
   <img  src="../data/images/Intersection.png" height=220>
 </p>
 
 ### If not, and the code is showing, use the _Cell_ menu to _Run All_
-
 <p align="center">
   <img  src="../data/images/Intersection.png" height=220>
 </p>
 
-### Click on the **View** button to see the top of the phenotype file.
+### Click on the **View** button to see the top of the selected file.
 <p align="center">
   <img  src="../data/images/Intersection.png" height=220>
 </p>
 
-### Use listboxes to select columns for: ClusterID, Event and Time; click the **Show** button.
+### Use listboxes to select parameters where they are shown.
 <p align="center">
   <img  src="../data/images/Intersection.png" height=220>
 </p>
@@ -59,7 +58,7 @@ There are eight transformation methods that one can choose from:
 <p align="center">
   <img  src="../data/images/select_restart.png" height=220>
 </p>
-
+ ---
 ## 2) Example Transpose a file Using the default data:
  ---
 
