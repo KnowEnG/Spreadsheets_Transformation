@@ -49,7 +49,7 @@ There are eight transformation methods that one can choose from:
 </p>
  ---
 
-### Use the _Kernel_ menu _Restart and Clear Output_ to clear error messages (and all output).
+### Use _Kernel_ menu _Restart and Clear Output_ to clear error messages (and all dispalyed output).
 <p align="center">
   <img  src="../data/images/restart_notebook.png" height=320>
 </p>
