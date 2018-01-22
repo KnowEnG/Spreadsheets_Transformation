@@ -2,7 +2,13 @@
 Created on Thursday September 7 12:54:00 2017
 @author: The KnowEnG dev team
 lanier4@illinois.edu
+sobh@illinois.edu
 """
+def kaplan_meier_graphic(run_parameters):
+    """ get the lifelines kaplan-meier graph and p-value from a spreadsheet """
+    from spreadsheets_transformation_toolbox import run_kaplan_meier
+    run_kaplan_meier(run_parameters)
+
 def select_subtype_df(run_parameters):
     """ get sub_spreadsheet_df and sub_phenotype_df of a phenotype category """
     from spreadsheets_transformation_toolbox import run_select_subtype_df
@@ -45,6 +51,7 @@ def stats_df(run_parameters):
 
 
 SELECT = {
+    "kaplan_meier_graphic":kaplan_meier_graphic,
     "select_subtype_df":select_subtype_df,
     "common_samples_df":common_samples_df,
     "select_genes_df":select_genes_df,
