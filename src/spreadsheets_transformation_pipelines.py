@@ -2,6 +2,7 @@
 Created on Thursday September 7 12:54:00 2017
 @author: The KnowEnG dev team
 lanier4@illinois.edu
+sobh@illinois.edu
 """
 def kaplan_meier_graphic(run_parameters):
     """ get the lifelines kaplan-meier graph and p-value from a spreadsheet """
