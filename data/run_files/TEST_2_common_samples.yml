@@ -1,7 +1,7 @@
 # find common sample names in two spreadsheets, write to output files names specified
 method:                     common_samples_df
 
-spreadsheet_1_file_name:    ../data/spreadsheets/spreadsheet_One.txt
-spreadsheet_2_file_name:    ../data/spreadsheets/spreadsheet_Two.txt
+spreadsheet_1_file_name:    ../data/spreadsheets/intersect_spreadsheet_A.tsv
+spreadsheet_2_file_name:    ../data/spreadsheets/intersect_spreadsheet_B.tsv
 
 results_directory:          ./run_dir/results

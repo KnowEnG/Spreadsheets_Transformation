@@ -1,4 +1,4 @@
-SCRIPT = ../src/mini_pipelines.py
+SCRIPT = ../src/spreadsheets_transformation_pipelines.py
 RUN_DIR = ./run_dir
 RUN_FILES = ../data/run_files
 RESULTS_DIR = $(RUN_DIR)/results
@@ -52,6 +52,8 @@ run_numerical_tranform:
 run_stat_values:
 	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_8_stat_value.yml
 
+run_kaplan_meier:
+	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_9_kaplan_meier.yml
 
 # ----------------------------------------------------------------
 # - VERIFICATION TESTS RUN SECTION                               -

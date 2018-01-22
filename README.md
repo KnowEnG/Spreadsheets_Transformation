@@ -1,7 +1,10 @@
-# KnowEnG Spreadsheets Transformation methods
-Apply various transformations on one or more Spreadsheets (Genomic, Phenotypic, ...)
+# KnowEnG's Spreadsheets Transformation pipeline
 
-There are eight data wrangling methods that one can choose from:
+This is the Knowledge Engine for Genomics (KnowEnG), an NIH BD2K Center of Excellence, Spreadsheets Transformation Pipeline.
+
+This pipeline applies various transformations to one or more Spreadsheets (Genomic, Phenotypic, ...)
+
+There are eight transformation methods that one can choose from:
 
 | **Options**                                      | **Method**                           | **Parameters**       |
 | ------------------------------------------------ | -------------------------------------| -------------------- |
@@ -31,7 +34,7 @@ Subset samples based on some phenotype column value, e.g., patients with longer 
 be a smaller spreadsheet and possibly with fewer columns.
 
 <p align="center">
-  <img  src="images/SubsetExpressionBasedonPhenotype.png" height=120>
+  <img  src="data/images/SubsetExpressionBasedonPhenotype.png" height=120>
 </p>
 
 
@@ -41,7 +44,7 @@ Finds the intersection between two spreadsheets row names and keep the column na
 Output is two spreadsheets with only the genes (rows) in common.
 
 <p align="center">
-  <img  src="images/Intersection.png" height=120>
+  <img  src="data/images/Intersection.png" height=120>
 </p>
 
 ## 3. Subset Genes
@@ -49,7 +52,7 @@ Output is two spreadsheets with only the genes (rows) in common.
 Subset the initial spreadsheet's rows based on a given row index names set.
 
 <p align="center">
-  <img  src="images/SubsetGenes.png" height=120>
+  <img  src="data/images/SubsetGenes.png" height=120>
 </p>
 
 ## 4. Union
@@ -57,7 +60,7 @@ Subset the initial spreadsheet's rows based on a given row index names set.
 Merge two phenotype spreadsheets such that the final spreadsheet contains all columns names and row names.
 
 <p align="center">
-  <img  src="images/Union.png" height=120>
+  <img  src="data/images/Union.png" height=120>
 </p>
 
 ## 5.  Group Then Apply a Function
@@ -65,7 +68,7 @@ Merge two phenotype spreadsheets such that the final spreadsheet contains all co
 Given expression spreadsheet and a group-samples-by criterion, e.g. the mean gene value for each sample-cluster assignment.
 
 <p align="center">
-  <img  src="images/GroupThenApplyaFunction.png" height=120>
+  <img  src="data/images/GroupThenApplyaFunction.png" height=120>
 </p>
 
 ## 6. Spreadsheet numerical transform 
@@ -92,15 +95,14 @@ Spreadsheet rows x columns transposed to columns x rows.
  apt-get install -y libfreetype6-dev libxft-dev
  apt-get install -y libblas-dev liblapack-dev libatlas-base-dev gfortran
 
- pip3 install pyyaml
- pip3 install knpackage
- pip3 install redis
  pip3 install numpy==1.11.1
  pip3 install pandas==0.18.1 
  pip3 install scipy==0.18.0
  pip3 install scikit-learn==0.17.1
  pip3 install matplotlib==1.4.2
+ pip3 install pyyaml
  pip3 install xmlrunner
+ pip3 install knpackage
 ```
 
 ### 2. Clone the Spreadsheets_Transformation github repository to your computer.
@@ -154,3 +156,32 @@ make env_setup
 ```
 python3 mini_pipelines.py -run_directory your/run_directory/path -run_file your_options.yml
 ```
+
+* * *
+## How to run the Spreadsheets_Transformation.ipynb Jupyter notebook.
+* * * 
+
+### 1. Install Jupyter and the widgets.
+```
+http://jupyter.readthedocs.io/en/latest/install.html
+
+http://ipywidgets.readthedocs.io/en/stable/user_install.html
+```
+
+### 2. Clone this repository using the directions in step 2 above.
+```
+git clone https://github.com/KnowEnG-Research/Spreadsheets_Transformation.git
+```
+
+### 3. Start the jupyter notebook server at the command prompt.
+```
+jupyter notebook
+```
+
+### 4. The Jupyter notebook server should open in your default browser - if not follow the directions in the terminal.
+
+* In the notbook server window navigate to the directory with the Spreadsheets_Transformation.ipynb notebook and click on it to start it in an new tab.
+
+* If you don't see a simple page with forms and buttons then you will have to select "Cell" > "Run All" in the Jupyter menu.
+
+* You may upload your files in the notebook server window or use the default files. The output will be in the "results" directory.

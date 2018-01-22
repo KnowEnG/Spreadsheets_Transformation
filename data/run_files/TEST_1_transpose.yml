@@ -1,5 +1,5 @@
 # transpose a single spreadsheet and write to output file name specified
 method:                      transpose_df
 
-spreadsheet_name_full_path:  ../data/spreadsheets/spreadsheet_One.txt
+spreadsheet_name_full_path:  ../data/spreadsheets/transpose_spreadsheet.tsv
 results_directory:           ./run_dir/results

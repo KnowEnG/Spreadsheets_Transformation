@@ -12,7 +12,10 @@ results_dir = '../test/run_dir/results'
 
 
 def verify_benchmark(algo_name, BENCHMARK_name_list, BENCHMARK_YML):
-    run_command = 'python3 ../src/mini_pipelines.py -run_directory ./run_dir -run_file ' + BENCHMARK_YML
+    print('BENCHMARK_YML', BENCHMARK_YML)
+    for list_member in BENCHMARK_name_list:
+        print('\t',list_member)
+    run_command = 'python3 ../src/spreadsheets_transformation_pipelines.py -run_directory ./run_dir -run_file ' + BENCHMARK_YML
     os.system(run_command)
 
     All_files_in_results_dir = os.listdir(results_dir)
@@ -30,24 +33,25 @@ def verify_benchmark(algo_name, BENCHMARK_name_list, BENCHMARK_YML):
                 else:
                     num_failed_tests += 1
                     print(BENCHMARK, '****** FAIL ******')
+
     return num_succeed_tests, num_failed_tests
 
 
 def main():
-    BENCHMARK = {'spreadsheet_transpose' : ['TEST_1_transpose.yml', 'spreadsheet_One_transpose'],
+    BENCHMARK = {'spreadsheet_transpose' : ['TEST_1_transpose.yml', 'transpose_spreadsheet_transpose'],
                  'spreadsheets_common_samples' : ['TEST_2_common_samples.yml',
-                                                  'spreadsheet_One_common_samples',
-                                                  'spreadsheet_Two_common_samples'],
-                 'spreadsheets_merge' : ['TEST_3_merge.yml',
-                                         'spreadsheet_One_merge'],
-                 'select_spreadsheet_genes' : ['TEST_4_select_genes.yml', 'gene_samples_1_select_genes'],
+                                                  'intersect_spreadsheet_A_common_samples',
+                                                  'intersect_spreadsheet_B_common_samples'],
+                 'spreadsheets_merge' : ['TEST_3_merge.yml', 'merge_spreadsheet_A_merge'],
+                 'select_spreadsheet_genes' : ['TEST_4_select_genes.yml', 'select_rows_spreadsheet_select_genes'],
                  'spreadsheet_clustering_averages' : ['TEST_5_cluster_averages.yml',
-                                                          'gene_samples_small_cluster_median'],
+                                                      'average_spreadsheet_cluster_median'],
                  'spreadsheet_select_pheno_categorical' : ['TEST_6_select_categorical.yml',
-                                                           'tcga_ucec_somatic_mutation_data_phenotype_category',
-                                                           'UCEC_phenotype_phenotype_category'],
-                 'numerical_tranform' : ['TEST_7_numerical_transform.yml', 'spreadsheet_A_.G_absolute_value'],
-                 'stat_values' : ['TEST_8_stat_value.yml', 'gene_samples_1_sum_columns']
+                                                           'select_phenotype_spreadsheet_phenotype_category',
+                                                           'select_phenotype_phenotype_phenotype_category'],
+                 'numerical_tranform' : ['TEST_7_numerical_transform.yml',
+                                         'other_transforms_spreadsheet_absolute_value'],
+                 'stat_values' : ['TEST_8_stat_value.yml', 'descriptive_statistic_spreadsheet_sum_columns']
                  }
 
     os.system('make env_setup')

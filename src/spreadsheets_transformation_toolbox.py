@@ -7,8 +7,68 @@ import os
 import pandas as pd
 import numpy as np
 
+import matplotlib.pyplot as plt
+
+from   lifelines import KaplanMeierFitter
+from   lifelines.statistics import multivariate_logrank_test
+
 from scipy import stats
 import knpackage.toolbox as kn
+
+
+def run_kaplan_meier(run_parameters):
+    """ save the lifelines kaplan-meier graphical analysis and p-value to two files
+
+    Args:
+        run_parameters: with keys:
+                        results_directory
+                        phenotype_file_name (containing the following column names)
+                        cluster_id
+                        event_id
+                        time_id
+
+    Returns:
+        Writes:         two time-stamped files named after the phenotype file and "kaplan-meier"
+                        "png" (640 x 480) image of the lifelines kaplan-meier graphical analysis
+                        one cell dataframe with the p-value of the multivariate logrank test
+    """
+    results_directory = run_parameters['results_directory']
+    phenotype_file_name = run_parameters['phenotype_file_name']
+    cluster_id = run_parameters['cluster_id']
+    event_id = run_parameters['event_id']
+    time_id = run_parameters['time_id']
+
+    phenotype_df = kn.get_spreadsheet_df(phenotype_file_name)
+
+    T = phenotype_df[time_id]
+    C = phenotype_df[event_id]
+
+    results = multivariate_logrank_test(T, phenotype_df[cluster_id], C, alpha=0.99)
+    p_value = str('%g' % (results.p_value))
+    test_name = 'multivariate_logrank_test'
+
+    Clusters = sorted(phenotype_df[cluster_id].unique())
+    num_clusters = len(Clusters)
+
+    plt.clf()
+    ax = plt.subplot(111)
+
+    kmf = KaplanMeierFitter()
+    for cluster in Clusters:
+        ixc = phenotype_df[cluster_id] == cluster
+        kmf.fit(T.ix[ixc], C.ix[ixc], label=cluster + 1)
+        kmf.plot(ax=ax, show_censors=True, ci_show=False)
+
+    plt.title('number of clusters = %s' % (num_clusters))
+    plt.xlabel('Time (days)')
+    plt.ylabel('OS')
+
+    transform_name = "kaplan_meier"
+    kaplan_meier_spreadsheet_df = pd.DataFrame(data=p_value, index=[test_name], columns=['p_value'])
+
+    write_transform_df(kaplan_meier_spreadsheet_df, phenotype_file_name, transform_name, results_directory)
+    result_name = get_outfile_name(results_directory, phenotype_file_name, transform_name, file_ext='png')
+    plt.savefig(result_name, dpi=100)
 
 
 def run_select_subtype_df(run_parameters):
@@ -504,7 +564,7 @@ def write_transform_df(spreadsheet_df, spreadsheet_file_name, transform_name, re
     spreadsheet_df.to_csv(result_name, sep='\t',float_format='%g')
 
 
-def get_outfile_name(destination_dir, spreadsheet_file_name, transform_name, file_ext='tsv'):
+def get_outfile_name(destination_dir, spreadsheet_file_name, transform_name, file_ext='tsv', timestamp=True):
     """ construct a full path output file name from destination path, spreadsheet file name,
         transformation name and file extenstion
 
@@ -520,8 +580,11 @@ def get_outfile_name(destination_dir, spreadsheet_file_name, transform_name, fil
     nix_dir, name_base = os.path.split(spreadsheet_file_name)
     name_base, nix_ext = os.path.splitext(name_base)
     name_base = name_base + '_' + transform_name
-    name_base = kn.create_timestamped_filename(name_base, file_ext)
-    # spreadsheet_transformed_file_name = os.path.join(destination_dir, name_base)
+    if timestamp == True:
+        name_base = kn.create_timestamped_filename(name_base, file_ext)
+    else:
+        name_base = name_base + '.' + file_ext
+
     return os.path.join(destination_dir, name_base)
 
 
