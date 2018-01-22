@@ -66,8 +66,8 @@ def run_kaplan_meier(run_parameters):
     transform_name = "kaplan_meier"
     kaplan_meier_spreadsheet_df = pd.DataFrame(data=p_value, index=[test_name], columns=['p_value'])
 
-    write_transform_df(kaplan_meier_spreadsheet_df, phenotype_file_name, transform_name, results_directory)
-    result_name = get_outfile_name(results_directory, phenotype_file_name, transform_name, file_ext='png')
+    write_transform_df(kaplan_meier_spreadsheet_df, phenotype_file_name, transform_name + '_p_value', results_directory)
+    result_name = get_outfile_name(results_directory, phenotype_file_name, transform_name + '_graphic', file_ext='png')
     plt.savefig(result_name, dpi=100)
 
 

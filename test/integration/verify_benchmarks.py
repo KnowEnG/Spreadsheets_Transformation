@@ -26,7 +26,11 @@ def verify_benchmark(algo_name, BENCHMARK_name_list, BENCHMARK_YML):
         for BENCHMARK_name in BENCHMARK_name_list:
             if BENCHMARK_name in f:
                 RESULT = os.path.join(results_dir, f)
-                BENCHMARK = os.path.join(verification_dir, BENCHMARK_name + '.tsv')
+                _, file_ext = os.path.splitext(f)
+                if file_ext == '.png':
+                    BENCHMARK = os.path.join(verification_dir, BENCHMARK_name + '.png')
+                else:
+                    BENCHMARK = os.path.join(verification_dir, BENCHMARK_name + '.tsv')
                 if filecmp.cmp(RESULT, BENCHMARK) == True:
                     num_succeed_tests += 1
                     print(BENCHMARK, '______ PASS ______')
@@ -51,7 +55,10 @@ def main():
                                                            'select_phenotype_phenotype_phenotype_category'],
                  'numerical_tranform' : ['TEST_7_numerical_transform.yml',
                                          'other_transforms_spreadsheet_absolute_value'],
-                 'stat_values' : ['TEST_8_stat_value.yml', 'descriptive_statistic_spreadsheet_sum_columns']
+                 'stat_values' : ['TEST_8_stat_value.yml', 'descriptive_statistic_spreadsheet_sum_columns'],
+                 'kaplan_meier_graphic' : ['TEST_9_kaplan_meier.yml',
+                                           'Kaplan_Meijer_data_kaplan_meier_p_value',
+                                           'Kaplan_Meijer_data_kaplan_meier_graphic']
                  }
 
     os.system('make env_setup')
