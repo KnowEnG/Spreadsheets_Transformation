@@ -15,6 +15,19 @@ from   lifelines.statistics import multivariate_logrank_test
 from scipy import stats
 import knpackage.toolbox as kn
 
+def run_categorical_binary(run_parameters):
+    """ save a phenotypes vs category binary spreadsheet
+
+    Args:
+        run_parameters: with keys:
+                        results_directory
+                        phenotype_file_name (containing the following column names)
+                        category_id
+    Returns:
+        Only writes
+    """
+    results_directory = run_parameters['results_directory']
+    phenotype_file_name = run_parameters['phenotype_file_name']
 
 def run_kaplan_meier(run_parameters):
     """ save the lifelines kaplan-meier graphical analysis and p-value to two files

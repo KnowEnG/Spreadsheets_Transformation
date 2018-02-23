@@ -4,6 +4,11 @@ Created on Thursday September 7 12:54:00 2017
 lanier4@illinois.edu
 sobh@illinois.edu
 """
+def cateorical_2_bin_df(run_parameters):
+    """ write a phenotypes vs categorical binary spreadsheet from selected column """
+    from spreadsheets_transformation_toolbox import run_categorical_binary
+    run_categorical_binary(run_parameters)
+
 def kaplan_meier_graphic(run_parameters):
     """ get the lifelines kaplan-meier graph and p-value from a spreadsheet """
     from spreadsheets_transformation_toolbox import run_kaplan_meier
@@ -59,7 +64,8 @@ SELECT = {
     "cluster_statistics_df":cluster_statistics_df,
     "transpose_df":transpose_df,
     "numeric_transform":numeric_transform,
-    "stats_df":stats_df}
+    "stats_df":stats_df,
+    "cateorical_2_bin_df": cateorical_2_bin_df}
 
 
 def main():
