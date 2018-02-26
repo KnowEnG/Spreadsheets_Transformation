@@ -55,6 +55,9 @@ run_stat_values:
 run_kaplan_meier:
 	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_9_kaplan_meier.yml
 
+run_category_binary:
+	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_10_categorical_to_bin.yml
+
 # ----------------------------------------------------------------
 # - VERIFICATION TESTS RUN SECTION                               -
 # ----------------------------------------------------------------
