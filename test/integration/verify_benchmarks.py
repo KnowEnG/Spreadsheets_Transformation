@@ -58,7 +58,9 @@ def main():
                  'stat_values' : ['TEST_8_stat_value.yml', 'descriptive_statistic_spreadsheet_sum_columns'],
                  'kaplan_meier_graphic' : ['TEST_9_kaplan_meier.yml',
                                            'Kaplan_Meijer_data_kaplan_meier_p_value',
-                                           'Kaplan_Meijer_data_kaplan_meier_graphic']
+                                           'Kaplan_Meijer_data_kaplan_meier_graphic'],
+                 'cateorical_2_bin_df': ['TEST_10_categorical_to_bin.yml',
+                                          'Kaplan_Meijer_data_categorical_binary']
                  }
 
     os.system('make env_setup')

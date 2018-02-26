@@ -1,10 +1,12 @@
 # kaplan-meier graphical analysis using the lifelines library.
-method:                 kaplan_meier_graphic
+method:                 cateorical_2_bin_df
 
 phenotype_file_name:    ../data/spreadsheets/Kaplan_Meijer_data.tsv
 
-cluster_id:             ClusterID
-event_id:               event
-time_id:                time
+column_id:              ClusterID
 
 results_directory:                        ./run_dir/results
+
+#cluster_id:             ClusterID
+#event_id:               event
+#time_id:                time

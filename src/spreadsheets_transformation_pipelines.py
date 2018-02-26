@@ -65,7 +65,7 @@ SELECT = {
     "transpose_df":transpose_df,
     "numeric_transform":numeric_transform,
     "stats_df":stats_df,
-    "cateorical_2_bin_df": cateorical_2_bin_df}
+    "cateorical_2_bin_df":cateorical_2_bin_df}
 
 
 def main():

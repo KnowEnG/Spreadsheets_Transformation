@@ -1,4 +1,4 @@
-	days_to_death	days_to_last	days_survival	diag_age	race	ethnicity	gender	living	histICDO3	hist_simple	ICDO3site	ICD10	ICD10_simple	stage	stage_simple	stage_ismeta	grade	grade_simple	residual
+sample_id	days_to_death	days_to_last	days_survival	diag_age	race	ethnicity	gender	living	histICDO3	hist_simple	ICDO3site	ICD10	ICD10_simple	stage	stage_simple	stage_ismeta	grade	grade_simple	residual
 TCGA-A5-A0G1	3251		3251	67	white	not hispanic or latino	female	deceased	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage ia	i	0	grade 3	High Grade	r0
 TCGA-A5-A0G2		4053	4053	57	asian	not hispanic or latino	female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiib	iii	0	grade 3	High Grade	r0
 TCGA-A5-A0G3		1079	1079	61	black or african american		female	living	8441/3	serous adenocarcinoma	c54.1	c54.1	1	stage iiic2	iii	0	grade 3	High Grade	r0
