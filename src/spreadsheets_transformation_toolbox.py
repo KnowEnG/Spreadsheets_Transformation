@@ -15,6 +15,30 @@ from   lifelines.statistics import multivariate_logrank_test
 from scipy import stats
 import knpackage.toolbox as kn
 
+def run_categorical_binary(run_parameters):
+    """ save a samples vs category binary spreadsheet
+
+    Args:
+        run_parameters: with keys:
+                        results_directory
+                        phenotype_file_name
+                        column_id
+    Returns:
+        Only writes the samples phenotype category binary as a .tsv
+    """
+    transform_name = 'categorical_binary'
+    results_directory = run_parameters['results_directory']
+    phenotype_file_name = run_parameters['phenotype_file_name']
+    category_df = kn.get_spreadsheet_df(phenotype_file_name)
+    column_id = run_parameters['column_id']
+
+    cat_names = np.unique(category_df[column_id])
+    cat_bin_df = pd.DataFrame(np.zeros((category_df.shape[0], len(cat_names))), columns=cat_names, index=category_df.index)
+
+    for column_k in cat_names:
+        cat_bin_df[column_k] += category_df[column_id] == column_k
+
+    write_transform_df(cat_bin_df, phenotype_file_name, transform_name, results_directory)
 
 def run_kaplan_meier(run_parameters):
     """ save the lifelines kaplan-meier graphical analysis and p-value to two files
@@ -561,6 +585,7 @@ def write_transform_df(spreadsheet_df, spreadsheet_file_name, transform_name, re
         results_directory:      an existing directory to write to
     """
     result_name = get_outfile_name(results_directory, spreadsheet_file_name, transform_name)
+    spreadsheet_df.index.name = None
     spreadsheet_df.to_csv(result_name, sep='\t',float_format='%g')
 
 
