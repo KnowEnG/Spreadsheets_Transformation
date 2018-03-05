@@ -26,6 +26,9 @@ if len(USER_BASE_DIRECTORIES_LIST) < 1 or not USER_RESULTS_DIRECTORY in USER_BAS
 #                                                                               legacy cell-code alias
 
 USER_DATAFILE_EXTENSIONS_LIST = ['.tsv', '.txt', '.df', '.gz']
+LIST_BOX_UPDATE_MESSAGE = 'View == Update List'
+# BUTTON_CLEAR_STRING = 'Clear'
+# VIEW_FILE_STRING = 'View'
 
 #                                                                                       layout styles
 lisbox_layout                  = widgets.Layout(width='50%')
