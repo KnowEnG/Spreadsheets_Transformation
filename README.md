@@ -139,6 +139,8 @@ make env_setup
 | make run_spreadsheet_select_pheno_categorical | TEST_6_select_categorical.yml|
 | make run_numerical_tranform | TEST_7_numerical_transform.yml|
 | make run_stat_values | TEST_8_stat_value.yml |
+| make run_kaplan_meier | TEST_9_kaplan_meier.yml |
+| make run_category_binary | TEST_10_categorical_to_bin.yml |
 
 ### 7. Ouput files will be written to the results directory named in the Options file, using the name(s) of the input files as appended with the transformation name and a timestamp.
 
