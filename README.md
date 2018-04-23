@@ -27,6 +27,8 @@ There are eight transformation methods that one can choose from:
 6. Spreadsheet numerical transform
 7. Spreadsheet statistics
 8. Spreadsheet transpose
+9. Kaplan-Meier
+10. Category to Binary
 
 ## 1. Subset Based on a Phenotype category and category name
 
