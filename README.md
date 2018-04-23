@@ -16,6 +16,8 @@ There are eight transformation methods that one can choose from:
 | Spreadsheet numerical transform                  | numerical transform            | spreadsheet, transformation name|
 | Spreadsheet statistics                           | stats                          | spreadsheet, statistic name|
 | Spreadsheet transpose                            | run_transpose                        | one spreadsheet |
+| Kaplan-Meier                            | run_kaplan_meier                        | spreadsheet, cluster_id, event, time |
+| Spreadsheet category to binary                            | run_category_binary        | spreadsheet, category |
 
 ## Table of Transformations
 ---
