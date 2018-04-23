@@ -16,8 +16,10 @@ There are eight transformation methods that one can choose from:
 | Spreadsheet numerical transform                  | numerical transform            | spreadsheet, transformation name|
 | Spreadsheet statistics                           | stats                          | spreadsheet, statistic name|
 | Spreadsheet transpose                            | run_transpose                        | one spreadsheet |
+| Kaplan-Meier                            | run_kaplan_meier                        | spreadsheet, cluster_id, event, time |
+| Spreadsheet category to binary                            | run_category_binary        | spreadsheet, category |
 
-## Table of Transformtions
+## Table of Transformations
 ---
 1. Subset Based on Phenotype category and id
 2. Intersection
@@ -27,6 +29,8 @@ There are eight transformation methods that one can choose from:
 6. Spreadsheet numerical transform
 7. Spreadsheet statistics
 8. Spreadsheet transpose
+9. Kaplan-Meier
+10. Category to Binary
 
 ## 1. Subset Based on a Phenotype category and category name
 
@@ -82,6 +86,14 @@ Spreadsheet measure overall, by rows or columns such as; min, max, sum, mean, me
 ## 8. Spreadsheet transpose
 
 Spreadsheet rows x columns transposed to columns x rows.
+
+## 9. Kaplan-Meier
+
+Samples x phenotype spreadsheet, with clusters ID, event and time columns output to Kaplan-Meier plot as png image.
+
+## 10. Category to Binary
+
+Samples x phenotype spreadsheet, select category column, output samples x unique-categories binary spreadsheet.
 
 
 
