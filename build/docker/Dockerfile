@@ -11,7 +11,7 @@ RUN pip3 install matplotlib
 RUN pip3 install lifelines
 
 # Clone from github
-RUN git clone https://github.com/dlanier/Spreadsheets_Transformation.git ${SRC_LOC} 
+RUN git clone https://github.com/KnowEnG/Spreadsheets_Transformation.git ${SRC_LOC} 
 
 # Set up working directory
 WORKDIR ${SRC_LOC}
