@@ -4,6 +4,8 @@ for KnowEnG pipelines
 """
 
 import os
+import string
+
 import pandas as pd
 import numpy as np
 
@@ -33,17 +35,39 @@ def run_categorical_binary(run_parameters):
     phenotype_file_name = run_parameters['phenotype_file_name']
     column_id = run_parameters['column_id']
 
-    cat_bin_df = select_categorical_binary(phenotype_file_name, column_id)
-    write_transform_df(cat_bin_df, phenotype_file_name, transform_name, results_directory)
+    clust_file_names = phenotype_file_name.split(',')
+    if isinstance(clust_file_names, list) and len(clust_file_names) > 1:
+        clust_file_list = []
+        data_dir = ''
+        for cf in clust_file_names:
+            data_dir_x, cf_name = os.path.split(cf)
+            clust_file_list.append(cf_name)
+            if data_dir == '':
+                data_dir = data_dir_x
 
 
-def select_categorical_binary(phenotype_file_name, column_id):
+        cat_bin_df = get_cluster_binary_dataframe(clust_file_list, data_dir)
+        outfile_name = get_outfile_name(results_directory, 'CLUSTERS', transform_name, 'tsv', False)
+        cat_bin_df.to_csv(outfile_name, sep='\t')
+        # write_transform_df(cat_bin_df, 'clusters', transform_name, results_directory)
+
+    else:
+        category_df = kn.get_spreadsheet_df(phenotype_file_name).fillna('NaN')
+        cat_bin_df = select_categorical_binary(category_df, column_id)
+
+        write_transform_df(cat_bin_df, phenotype_file_name, transform_name, results_directory)
+
+
+def select_categorical_binary(category_df, column_id):
     """
     Args:
     Returns:
 
     """
-    category_df = kn.get_spreadsheet_df(phenotype_file_name).fillna('NaN')
+    if isinstance(category_df, str) and os.path.isfile(category_df):
+        category_df = kn.get_spreadsheet_df(category_df).fillna('NaN')
+        # legacy protection
+        
     column_values = category_df[column_id]
     cat_names = np.unique(column_values)
     cat_bin_df = pd.DataFrame(np.zeros((category_df.shape[0], len(cat_names))), columns=cat_names, index=category_df.index)
@@ -52,6 +76,116 @@ def select_categorical_binary(phenotype_file_name, column_id):
         cat_bin_df[column_k] += category_df[column_id] == column_k
 
     return cat_bin_df
+
+
+def get_categorical_binary_df(category_df, column_id):
+    """
+    Args:
+        category_df:    samples x phenotypes dataframe
+        column_id:      which column to covert to binary
+
+    Returns:
+        cat_bin_df:     samples x phenotypes dataframe with binary membership columns
+    """
+    column_values = category_df[column_id]
+    cat_names = np.unique(column_values)
+    cat_bin_df = pd.DataFrame(np.zeros((category_df.shape[0], len(cat_names))),
+                              columns=cat_names, index=category_df.index)
+
+    for column_k in cat_names:
+        cat_bin_df[column_k] += category_df[column_id] == column_k
+
+    return cat_bin_df
+
+
+def integer_2_alphanumeric_sequence(alpha_set, n, width=None):
+    """ convert integer n to base alpha_set numbering """
+    alpha_set = sorted(list(set(list(alpha_set))))
+    alpha_base = len(alpha_set)
+    if width is None:
+        max_p = 0
+        while n - alpha_base ** max_p > 0:
+            max_p += 1
+    else:
+        max_p = width - 1
+
+    S = ''
+    alpha_exponent = 1
+    for alpha_exponent in range(max_p, 0, -1):
+        S += alpha_set[np.mod(int(np.floor(n / alpha_base ** alpha_exponent)), alpha_base)]
+
+    last_index = int(np.floor(n - alpha_base ** alpha_exponent))
+    S += alpha_set[np.mod(last_index, alpha_base)]
+
+    return S
+
+
+def get_alpha_sequence_name(left_name, n_dex):
+    """ construct alphabetically numbered, sortable name from "left_name" prefix and "_AA" suffix
+    """
+    ALPHA_CAPS = string.ascii_letters[26:]
+    alpha_seq = integer_2_alphanumeric_sequence(ALPHA_CAPS, n_dex, width=2)
+
+    return left_name + '_' + alpha_seq
+
+
+def get_df_names(dataframe_dict):
+    """ usage: row_names_dict, rows_list, col_names_dict, columns_list = get_df_names(dataframe_dict)
+    get a dict of column names """
+    col_set = set()
+    col_names_dict = {}
+    row_set = set()
+    row_names_dict = {}
+    df_names_list = []
+    for df_name, df in dataframe_dict.items():
+        df_names_list.append(df_name)
+        col_names_dict[df_name] = list(df.columns)
+        col_set = col_set | set(list(df.columns))
+        row_names_dict[df_name] = list(df.index)
+        row_set = row_set | set(df.index.tolist())
+
+    columns_list = sorted(list(col_set))
+    rows_list = sorted(list(row_set))
+    df_names_list = sorted(df_names_list)
+
+    return row_names_dict, rows_list, col_names_dict, columns_list, df_names_list
+
+
+def get_cluster_binary_dataframe(file_names_list, data_dir=None):
+    """ get a dictionay of dataframes from a list of dataframe files """
+    INDEX_COL_NAME = 'sample_id'
+    DF_BASE_NAME = 'sample'
+
+    if data_dir is None:
+        data_dir = os.getcwd()
+
+    dataframes_dict = {}
+    count = 0
+
+    for file_name in file_names_list:
+        full_path_name = os.path.join(data_dir, file_name)
+
+        this_name = get_alpha_sequence_name(DF_BASE_NAME, count)
+        count += 1
+
+        this_df = pd.read_csv(full_path_name, sep='\t', index_col=0, header=None)
+        this_df.columns = ['clusters']
+        this_df.index.name = INDEX_COL_NAME
+        dataframes_dict[this_name] = get_categorical_binary_df(this_df, 'clusters')
+
+    row_names_dict, rows_list, col_names_dict, columns_list, df_names_list = get_df_names(dataframes_dict)
+    cluster_binary_dataframe = pd.DataFrame(data=None, index=rows_list)
+    cluster_binary_dataframe.index.name = INDEX_COL_NAME
+    for col_name in columns_list:
+        for df_name in df_names_list:
+            df_cols_name = col_names_dict[df_name]
+            if col_name in df_cols_name:
+                new_col_name = df_name + '_%s' % (col_name)
+                cluster_binary_dataframe[new_col_name] = 0
+                col_data_df = dataframes_dict[df_name]
+                cluster_binary_dataframe.loc[row_names_dict[df_name], new_col_name] = col_data_df[col_name]
+
+    return cluster_binary_dataframe
 
 
 def run_kaplan_meier(run_parameters):
