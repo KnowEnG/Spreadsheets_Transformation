@@ -1,0 +1,13 @@
+
+method: cateorical_2_bin_df
+
+# must be comma separated if more than one file
+phenotype_file_name: ../data/spreadsheets/samples_label_by_cluster_hclust_Tue_05_Jun_2018_21_56_10.741529464_viz.tsv,
+                     ../data/spreadsheets/samples_label_by_cluster_hclust_Tue_05_Jun_2018_22_42_01.471225738_viz.tsv,
+                     ../data/spreadsheets/samples_label_by_cluster_hclust_Tue_05_Jun_2018_22_54_36.595123052_viz.tsv
+
+column_id:  ClusterID
+    
+run_directory: data/run_files
+
+results_directory: ./run_dir/results

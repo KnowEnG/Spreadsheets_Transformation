@@ -58,6 +58,9 @@ run_kaplan_meier:
 run_category_binary:
 	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_10_categorical_to_bin.yml
 
+run_category_binary_b_test:
+	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_10_B_categorical_to_bin.yml
+
 # ----------------------------------------------------------------
 # - VERIFICATION TESTS RUN SECTION                               -
 # ----------------------------------------------------------------
