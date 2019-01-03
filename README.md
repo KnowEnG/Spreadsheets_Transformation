@@ -199,3 +199,8 @@ jupyter notebook
 * If you don't see a simple page with forms and buttons then you will have to select "Cell" > "Run All" in the Jupyter menu.
 
 * You may upload your files in the notebook server window or use the default files. The output will be in the "results" directory.
+
+* * *
+## Docker image with Readme instructions:
+* * *
+[Run This Pipeline in / with a Docker Container](https://hub.docker.com/r/knowengdev/spreadsheets_transformation)

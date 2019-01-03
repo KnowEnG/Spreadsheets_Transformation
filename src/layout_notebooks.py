@@ -24,7 +24,7 @@ if len(USER_BASE_DIRECTORIES_LIST) < 1 or not USER_RESULTS_DIRECTORY in USER_BAS
     os.mkdir(USER_RESULTS_DIRECTORY)
 
 #                                                                               legacy cell-code alias
-
+DIRS_INCLUDE = ['include_all_dir', 'CLUSTERS']
 USER_DATAFILE_EXTENSIONS_LIST = ['.tsv', '.txt', '.df', '.gz']
 LIST_BOX_UPDATE_MESSAGE = 'View == Update List'
 # BUTTON_CLEAR_STRING = 'Clear'
@@ -101,6 +101,8 @@ def user_data_list(target_dir, FEXT):
             noNeed, f_ext = os.path.splitext(f)
             if f_ext in FEXT:
                 my_file_list.append(f)
+        elif os.path.isdir(os.path.join(target_dir, f)) and f in DIRS_INCLUDE:
+            my_file_list.append(f)
                 
     if len(my_file_list) <= 0:
         my_file_list.append('No Data')
