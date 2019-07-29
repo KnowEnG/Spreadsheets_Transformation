@@ -170,6 +170,9 @@ def get_cluster_binary_dataframe(file_names_list, data_dir=None):
 
         this_df = pd.read_csv(full_path_name, sep='\t', index_col=0, header=None)
         this_df.columns = ['clusters']
+        # convert all cluster labels to strings, because otherwise a mix of
+        # integers and strings would cause type mismatch problems downstream
+        this_df['clusters'] = this_df['clusters'].astype(str)
         this_df.index.name = INDEX_COL_NAME
         dataframes_dict[this_name] = get_categorical_binary_df(this_df, 'clusters')
 
