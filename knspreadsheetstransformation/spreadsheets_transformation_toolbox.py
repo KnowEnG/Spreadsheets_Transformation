@@ -231,7 +231,7 @@ def run_kaplan_meier(run_parameters):
     kmf = KaplanMeierFitter()
     for cluster in Clusters:
         ixc = phenotype_df[cluster_id] == cluster
-        kmf.fit(T.ix[ixc], C.ix[ixc], label=cluster + 1)
+        kmf.fit(T.iloc[ixc], C.iloc[ixc], label=cluster + 1)
         kmf.plot(ax=ax, show_censors=True, ci_show=False)
 
     plt.title('number of clusters = %s' % (num_clusters))
