@@ -230,7 +230,7 @@ def run_kaplan_meier(run_parameters):
 
     kmf = KaplanMeierFitter()
     for cluster in Clusters:
-        ixc = phenotype_df[cluster_id] == cluster
+        ixc = (phenotype_df[cluster_id] == cluster).values
         kmf.fit(T.iloc[ixc], C.iloc[ixc], label=cluster + 1)
         kmf.plot(ax=ax, show_censors=True, ci_show=False)
 
