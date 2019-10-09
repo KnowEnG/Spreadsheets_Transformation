@@ -6,52 +6,52 @@ sobh@illinois.edu
 """
 def cateorical_2_bin_df(run_parameters):
     """ write a phenotypes vs categorical binary spreadsheet from selected column """
-    from spreadsheets_transformation_toolbox import run_categorical_binary
+    from .spreadsheets_transformation_toolbox import run_categorical_binary
     run_categorical_binary(run_parameters)
 
 def kaplan_meier_graphic(run_parameters):
     """ get the lifelines kaplan-meier graph and p-value from a spreadsheet """
-    from spreadsheets_transformation_toolbox import run_kaplan_meier
+    from .spreadsheets_transformation_toolbox import run_kaplan_meier
     run_kaplan_meier(run_parameters)
 
 def select_subtype_df(run_parameters):
     """ get sub_spreadsheet_df and sub_phenotype_df of a phenotype category """
-    from spreadsheets_transformation_toolbox import run_select_subtype_df
+    from .spreadsheets_transformation_toolbox import run_select_subtype_df
     run_select_subtype_df(run_parameters)
 
 def common_samples_df(run_parameters):
     """ get common samples """
-    from spreadsheets_transformation_toolbox import run_common_samples_df
+    from .spreadsheets_transformation_toolbox import run_common_samples_df
     run_common_samples_df(run_parameters)
 
 def select_genes_df(run_parameters):
     """ get spreadsheet from other spreadsheet with list of genes """
-    from spreadsheets_transformation_toolbox import run_select_genes
+    from .spreadsheets_transformation_toolbox import run_select_genes
     run_select_genes(run_parameters)
 
 def merge_df(run_parameters):
     """ get the union of two dataframes """
-    from spreadsheets_transformation_toolbox import run_merge_df
+    from .spreadsheets_transformation_toolbox import run_merge_df
     run_merge_df(run_parameters)
 
 def cluster_statistics_df(run_parameters):
     """ statistic by clustering """
-    from spreadsheets_transformation_toolbox import run_cluster_statistics_df
+    from .spreadsheets_transformation_toolbox import run_cluster_statistics_df
     run_cluster_statistics_df(run_parameters)
 
 def transpose_df(run_parameters):
     ''' transpose and write a spreadsheet'''
-    from spreadsheets_transformation_toolbox import run_transpose
+    from .spreadsheets_transformation_toolbox import run_transpose
     run_transpose(run_parameters)
 
 def numeric_transform(run_parameters):
     ''' numerical transformation of spreadsheet data '''
-    from spreadsheets_transformation_toolbox import run_spreadsheet_numerical_transform
+    from .spreadsheets_transformation_toolbox import run_spreadsheet_numerical_transform
     run_spreadsheet_numerical_transform(run_parameters)
 
 def stats_df(run_parameters):
     """ statistical data for a spreadsheet """
-    from spreadsheets_transformation_toolbox import run_stats_df
+    from .spreadsheets_transformation_toolbox import run_stats_df
     run_stats_df(run_parameters)
 
 

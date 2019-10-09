@@ -20,8 +20,7 @@ from   lifelines.statistics import multivariate_logrank_test
 from   knpackage import toolbox as kn
 
 import sys
-sys.path.insert(1, '../notebooks_KnowEnG/src')
-from   layout_notebooks import *
+from   .layout_notebooks import *
 
 RESOLUTION = 100
 IM_SIZE = (12, 8)

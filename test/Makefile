@@ -1,9 +1,10 @@
-SCRIPT = ../src/spreadsheets_transformation_pipelines.py
+SCRIPT = -m knspreadsheetstransformation.spreadsheets_transformation_pipelines
 RUN_DIR = ./run_dir
 RUN_FILES = ../data/run_files
 RESULTS_DIR = $(RUN_DIR)/results
 INPUT_DATA_DIR = ../data
 UNIT_TEST_TEMP_DIR = ./unit/tmp
+PYTHONPATH=../
 
 RMR = rm -rf
 MKDIR_P = mkdir -p
@@ -29,37 +30,37 @@ clean_dir_recursively:
 run_all: run_spreadsheet_transpose  run_spreadsheets_common_samples  run_spreadsheets_merge  run_select_spreadsheet_genes  run_spreadsheet_clustering_averages run_spreadsheet_select_pheno_categorical run_numerical_tranform run_stat_values
 	 
 run_spreadsheet_transpose:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_1_transpose.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_1_transpose.yml
 
 run_spreadsheets_common_samples:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_2_common_samples.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_2_common_samples.yml
 
 run_spreadsheets_merge:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_3_merge.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_3_merge.yml
 
 run_select_spreadsheet_genes:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_4_select_genes.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_4_select_genes.yml
 
 run_spreadsheet_clustering_averages:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_5_cluster_averages.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_5_cluster_averages.yml
 
 run_spreadsheet_select_pheno_categorical:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_6_select_categorical.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_6_select_categorical.yml
 
 run_numerical_tranform:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_7_numerical_transform.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_7_numerical_transform.yml
 
 run_stat_values:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_8_stat_value.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_8_stat_value.yml
 
 run_kaplan_meier:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_9_kaplan_meier.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_9_kaplan_meier.yml
 
 run_category_binary:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_10_categorical_to_bin.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_10_categorical_to_bin.yml
 
 run_category_binary_b_test:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_10_B_categorical_to_bin.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_10_B_categorical_to_bin.yml
 
 # ----------------------------------------------------------------
 # - VERIFICATION TESTS RUN SECTION                               -
@@ -71,7 +72,7 @@ verification_tests:
 # - UNIT TESTS RUN SECTION                                       -
 # ----------------------------------------------------------------
 run_benchmark_test:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_1_transpose.yml
+	PYTHONPATH=${PYTHONPATH} python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file TEST_1_transpose.yml
 
 # ----------------------------------------------------------------
 # - CLEAN UP SECTION                                             -
