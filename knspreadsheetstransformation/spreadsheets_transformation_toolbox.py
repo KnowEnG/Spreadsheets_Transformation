@@ -396,7 +396,7 @@ def merge_df(spreadsheet_1_df, spreadsheet_2_df):
     Returns:
         merged_df:     samples x phenotypes with all rows and sample names in both inputs
     """
-    merged_df = pd.concat([spreadsheet_1_df, spreadsheet_2_df], axis=1)
+    merged_df = pd.concat([spreadsheet_1_df, spreadsheet_2_df], axis=1, sort=True)
     return merged_df
 
 
